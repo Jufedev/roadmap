@@ -1,0 +1,21 @@
+<a
+  target="_blank"
+  [routerLink]="['/book-info', bookInfo.id]"
+>
+  @if (bookInfo.volumeInfo.imageLinks == undefined) {
+  <img
+    ngSrc="/images/noimage.png"
+    fill
+  />
+  } @else {
+
+  <img
+    [ngSrc]="bookInfo.volumeInfo.imageLinks.thumbnail"
+    fill
+    priority
+  />
+  }
+
+  <p>{{ bookInfo.volumeInfo.title }}</p>
+  <p>{{ bookInfo.volumeInfo.authors }}</p>
+</a>

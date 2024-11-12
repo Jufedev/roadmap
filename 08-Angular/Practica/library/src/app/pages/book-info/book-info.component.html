@@ -1,0 +1,27 @@
+@if (bookResult$ | async; as resultObject) {
+<h2>
+  {{ resultObject.volumeInfo.title }}
+</h2>
+<ul>
+  <h3>Autores:</h3>
+  @for (item of resultObject.volumeInfo.authors; track $index) {
+  <li>
+    {{ item }}
+  </li>
+  }
+</ul>
+
+<h3>Año publicación:</h3>
+<p>{{ resultObject.volumeInfo.publishedDate }}</p>
+
+<h3>Descripción:</h3>
+<div [innerHTML]="resultObject.volumeInfo.description"></div>
+
+<img
+  [ngSrc]="resultObject.volumeInfo.imageLinks.thumbnail"
+  fill
+  priority
+/>
+}
+
+<a href="/">Volver</a>

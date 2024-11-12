@@ -1,0 +1,47 @@
+<app-search (termBook)="receiveTermBook($event)" />
+
+@if (bookResults$ | async; as resultObject) {
+<section>
+  <form>
+    <label
+      >Numero mínimo de paginas
+      <input
+        (input)="onInputChange($event)"
+        type="range"
+        [max]="maximoPaginas"
+        [min]="minimoPaginas"
+      />
+    </label>
+  </form>
+
+  <article>
+    <p>Ordenar:</p>
+    <div>
+      Fecha de publicación @if (filteredDataItems.length != 0) {
+      <button (click)="sortByPublishedDate(filteredDataItems, true)">^</button>
+      <button (click)="sortByPublishedDate(filteredDataItems, false)">v</button>
+      } @else {
+      <button (click)="sortByPublishedDate(resultObject.items!, true)">
+        ^
+      </button>
+      <button (click)="sortByPublishedDate(resultObject.items!, false)">
+        v
+      </button>
+      }
+    </div>
+  </article>
+</section>
+<ul>
+  @if (filteredDataItems.length != 0) { @for (item of filteredDataItems; track
+  item.id){
+  <li>
+    <app-book [bookInfo]="item" />
+    <p>HOLa</p>
+  </li>
+  } } @else { @for (item of resultObject.items; track item.id) {
+  <li>
+    <app-book [bookInfo]="item" />
+  </li>
+  } }
+</ul>
+}

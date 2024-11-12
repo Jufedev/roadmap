@@ -1,0 +1,11 @@
+<form>
+  <label>
+    <input
+      type="text"
+      placeholder="Harry Potter, Game of Thrones,etc..."
+      [(ngModel)]="searchBook"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </label>
+  <button (click)="onClick()">Buscar</button>
+</form>
