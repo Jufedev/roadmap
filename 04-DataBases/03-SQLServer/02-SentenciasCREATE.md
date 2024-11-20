@@ -1,7 +1,9 @@
 ```SQL
+-- Bases de datos
 CREATE DATABASE Hospital;
 
--- constraint hace que se cree un nombre único para ese id
+
+-- Tablas
 CREATE TABLE Paciente(
 	idPaciente int NOT NULL,
 	nombre varchar(50) NOT NULL,
@@ -9,20 +11,18 @@ CREATE TABLE Paciente(
 	idPais char(3) NOT NULL,
 	telefono varchar(20) NOT NULL,
 	observacion varchar(1000) NOT NULL,
-	CONSTRAINT PK_idPaciente PRIMARY KEY (idPaciente)
+	CONSTRAINT PK_idPaciente PRIMARY KEY (idPaciente) -- constraint hace que se cree un nombre único para ese id
 )
 
--- ID multivaluado
 CREATE TABLE HistoriaPaciente(
 	idHistoria int NOT NULL,
 	idPaciente int NOT NULL,
 	idMedico int NOT NULL,
-	CONSTRAINT PK_idHistoriaPaciente PRIMARY KEY (idHistoria, idPaciente, idMedico)
+	CONSTRAINT PK_idHistoriaPaciente PRIMARY KEY (idHistoria, idPaciente, idMedico) -- ID multivaluado
 )
 
--- identity (empieza en, aumenta en)
 CREATE TABLE Pago(
-	idPago int IDENTITY (1,1) NOT NULL,
+	idPago int IDENTITY (1,1) NOT NULL, -- identity (empieza en, aumenta en)
 	concepto tinyint NOT NULL,
 	fechaPago datetime NOT NULL,
 	monto money NOT NULL,
@@ -31,11 +31,14 @@ CREATE TABLE Pago(
 	CONSTRAINT PK_idPago PRIMARY KEY (idPago)
 )
 
+
 -- Eliminar tabla o base de datos
 DROP TABLE Ejemplo -- DROP DATABASE Ejemplo
 
+
 -- Limpiar una tabla
 TRUNCATE TABLE Ejemplo
+
 
 -- Crear tipos de datos
 CREATE TYPE medico FROM int NOT NULL
@@ -57,6 +60,7 @@ GO
 
 
 EXEC SP_ejemplo 1 -- Ejecutar el stored procedure
+
 
 -- Variables
 DECLARE @ordenamiento CHAR(1) = 'A'
@@ -101,7 +105,7 @@ sp_help Paciente
 sp-helptext SP_InsertarPaciente
 
 
--- Crear funciones
+-- Crear funciones escalares
 CREATE FUNCTION funcionEjemplo(@variable int)
 RETURNS int
 
@@ -113,5 +117,59 @@ BEGIN
 END
 
 
-SELECT dbo.funcionEjemplo(4) -- Invocar funciones
+SELECT dbo.funcionEjemplo(4) -- Invocar funciones escalares
+
+
+-- Creare funciones tipo tabla
+CREATE FUNCTION listaPaises()
+RETURNS @paises TABLE(idPais CHAR(3), pais VARCHAR(50))
+AS
+
+BEGIN
+	INSERT INTO @paises VALUES('ESP', 'España')
+
+	RETURN
+END
+
+
+SELECT * FROM dbo.listaPaises() -- Invocar funciones tipo tabla
+
+
+-- Tablas temporales (almacenadas en memoria (perdura en la ejecución de la querie))
+DECLARE @tablaTemp TABLE (id INT IDENTITY(1,1), pais VARCHAR(50))
+
+
+-- Tablas temporales físicas (almacenadas en disco (perdura en la ejecución del servicio))
+-- Si se reinicia el servicio se elimina la tabla
+CREATE TABLE #Paciente(
+	idPaciente INT IDENTITY(1,1) NOT NULL,
+	nombre varchar(50) NOT NULL,
+	telefono varchar(20) NOT NULL,
+)
+
+
+-- Vistas (guardar consultas especificas)
+-- En procesos grandes ayudan a ahorrar código (funciona como si fuera una tabla)
+CREATE VIEW PacientesYTurnos AS
+
+SELECT * FROM Paciente P
+	INNER JOIN TurnoPaciente TP
+	ON TP.idPaciente = P.idPaciente
+	INNER JOIN Turno T
+	ON T.idTurno = TP.idTurno
+WHERE ISNULL(T.estado, 0) = 0
+
+
+SELECT * FROM PacientesYTurnos -- Usar una vista
+
+
+-- Roles
+CREATE ROLE Pagos AUTHORIZATION dbo
+
+ALTER ROLE Pagos ADD MEMBER pepe
+
+
+-- Esquemas
+ALTER SCHEMA Facturacion TRANSFER Medico
+
 ```

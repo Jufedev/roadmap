@@ -52,4 +52,13 @@ END TRY
 BEGIN CATCH
 END CATCH
 
+
+DECLARE @i INT = 1
+WHILE @i <= (SELECT COUNT(*) FROM Pacientes)
+	SET @i += 1
+PRINT 'Cantidad de pacientes: ' + CONVERT(varchar, @i)
+
+
+
+IF() <> 8 -- Operador distinto de
 ```
