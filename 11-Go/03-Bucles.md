@@ -8,7 +8,6 @@ func main(){
         fmt.Printf("Iteracion: %d\n", i) // %d => ahi ira un digito y el que va a ir sera el segundo parametro
     }
 
-
     // Tipo while
     n := 0
     for n < 3 {

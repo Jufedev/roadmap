@@ -46,5 +46,15 @@ func main(){
 
     persona := Persona{Nombre: "Pepe", Edad: 85}
     personaPepito := Persona{Nombre: "Pepito"} // Se puede crear sin valores, puesto que cada tipo de dato ya tienen un valor por defecto
+
+    // Coversion de tipos
+    resultado := int(20.5)
+    resultadoStr := strconv.Itoa(20.5)
+
+    // Funcion Make
+    slice := make([]int, 3) // Se tiene que definir un tamaño inicial
+    mapa := make(map[string]int) // Mapa con keys string y values ints | mapa vacio
+    mapa["a"] = 1
+    _, dato = mapa["a"] // El diccionario tiene 3 datos, key, value y un dato booleano que confirma si tiene o no tiene un valor la key asociada
 }
 ```

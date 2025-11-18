@@ -17,6 +17,15 @@ func main(){
 
     fmt.Println("Eres mayor de edad")
 
+    separator := strings.Repeat("-", 20)
+    fmt.Println(separator)
+
+    // Declaracion de variables en el condicional
+    if numero := 2; numero%2 == 0 {
+        fmt.Println ("El numero es par")
+        return
+    }
+
     // Switch
     valor := 3
     switch valor {

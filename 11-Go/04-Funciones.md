@@ -38,12 +38,15 @@ func main() {
 }
 
 
-// Numero variable de argumentos
+// Numero variable de argumentos | Funciones variadicas
 func imprimirNombres(nombres ...string) {
     for _, nombre := range nombres {
         fmt.Println(nombre)
     }
 } 
+
+nombres := []string{"a", "b", "c"}
+imprimirNombres(nombre...)
 
 
 // funcion closure (devuelve otra funcion)
@@ -92,5 +95,12 @@ func main() {
     for i := 0; i < 10; i++ {
         fmt.Printf("fibonacci(%d) = %d\n", i, fibonacci(i))
     }
+
+    // Otra definicion de funciones | Variable como funcion, ideal para los scopes
+    numero := func(n int) int {
+		return n
+	}
+
+    fmt.Println("Numero:", fibo(2))
 }
 ```
