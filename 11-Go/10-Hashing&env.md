@@ -25,6 +25,12 @@ package main // Define el punto de entrada
 import "fmt"
 
 func main() {
+    // Cargar el archivo .env
+    error := godotenv.Load()
+
+    if error != nil {
+        log.Fatal("Error al cargar el archivo .env")
+    }
     // Nombre de la variable de entorno
     envVar := "APP_PORT"
 
@@ -57,5 +63,6 @@ func main() {
 
     fmt.Printf("Puerto de la aplicación: %s\n", port)
 }
+
 
 ```
