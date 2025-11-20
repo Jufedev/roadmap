@@ -5,7 +5,7 @@ import "fmt"
 
 // go | Transforma lo de la derecha en una GoRoutine
 // GoRoutine | Hilo de ejecucion ligero virtual
-// Hilo virtual |  Hilo del procesador
+// Hilo virtual | Hilo del procesador
 // Channel | Comunicar cosas entre GoRoutines
 
 // Envio hacia el canal
@@ -64,5 +64,39 @@ for i := o; i < 3; i++ { // Simular 3 accesos
             time.Sleep(100 * time.Millisecond)
         }
     }(i)
+}
+
+
+// WaitGroup: Agrupa goroutines y espera a que todas estas terminen antes de continuar
+func main() {
+    var wg sync.WaitGroup
+
+    // Definimos cuántas goroutines vamos a esperar
+    tareas := 3
+    wg.Add(tareas)
+
+    for i := 1; i <= tareas; i++ {
+        go func(id int) {
+            defer wg.Done() // Marca que esta goroutine terminó
+            fmt.Printf("Tarea %d iniciada...\n", id)
+            time.Sleep(time.Duration(id) * time.Second) // Simula trabajo
+            fmt.Printf("Tarea %d finalizada.\n", id)
+        }(i)
+    }
+
+    // Espera a que todas las goroutines terminen
+    wg.Wait()
+    fmt.Println("Todas las tareas han finalizado.")
+    
+    
+    fmt.Println("Ahora puedo ejecutar otro proceso, por ejemplo iniciar nuevas goroutines.")
+
+    // Nuevo proceso independiente
+    go func() {
+        fmt.Println("Proceso adicional ejecutándose después del WaitGroup.")
+    }()
+
+    // Pausa para que se vea la salida del proceso adicional
+    time.Sleep(1 * time.Second)
 }
 ```

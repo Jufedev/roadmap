@@ -36,5 +36,14 @@ func main(){
         default:
             fmt.Println ("No es 1, ni 2")
     }
+
+
+    // Simular un operador ternario
+    x := func() string {
+        if cond {
+            return "valor verdadero"
+        }
+        return "valor falso"
+    }()
 }
 ```
