@@ -10,6 +10,6 @@
 
 - El enfoque es el back
 - Se hace front para el consumo de APIs y cosas simples
-- El backend es desarrollado con ASP.NET (8)
-- El frontend es desarrollado con Angular (18)
+- El backend es desarrollado con Go y Python
+- El frontend es desarrollado con Astro
 - La base de datos relacional que se usa es SQL Server
