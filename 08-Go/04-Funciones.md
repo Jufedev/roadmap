@@ -8,6 +8,12 @@ func suma(a, b int) int {
     return a + b;
 }
 
+// Se puede asignar un nombre al tipo que retorna la funcion, asi hacer simplemente un return y se tomara el valor automaticamente
+func retornosNombrados(x, y int) (z int) {
+	z = x * y
+	return // aquí z es implícito, porque lo nombramos antes
+}
+
 func dividir(a, b float64) (float64, float64) {
     cociente := a / b
     resto = := float64(int(a) % int(b))
@@ -28,6 +34,9 @@ func dividir0(a, b float64) (float64, error) {
 }
 
 func main() {
+
+	p = new(int) // Función incorporada para crear elemento y reservar memoria (tienen valor default)
+
     cociente, error := dividir0(10, 0)
     if error =! nil {
         fmt.Println(error)
@@ -103,4 +112,5 @@ func main() {
 
     fmt.Println("Numero:", fibo(2))
 }
+
 ```
