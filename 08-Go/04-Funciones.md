@@ -113,4 +113,10 @@ func main() {
     fmt.Println("Numero:", fibo(2))
 }
 
+
+// Funciones literales (se definen y se llaman en linea)
+func(a, b int) int {
+	return (a + b) * 2
+}(10, 2)
 ```
+
