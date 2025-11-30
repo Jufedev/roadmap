@@ -105,7 +105,7 @@ func main() {
         fmt.Printf("fibonacci(%d) = %d\n", i, fibonacci(i))
     }
 
-    // Otra definicion de funciones | Variable como funcion, ideal para los scopes
+    // Otra definicion de funciones (Funciones anonimas) | Variable como funcion, ideal para los scopes
     numero := func(n int) int {
 		return n
 	}
