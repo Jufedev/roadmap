@@ -11,3 +11,7 @@
 - **Fork:**
 
   - Copia del repositorio (Cambia permisos).
+
+- **CI/CD:**
+
+  - Fases para el desarollo de proyectos (Plan > Code > Build > Test > Release > Deploy > Operate > Measure > Plan > ...).
