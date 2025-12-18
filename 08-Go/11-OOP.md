@@ -54,7 +54,7 @@ func main() {
 // HERENCIA
 
 // GO se apoya sobre la composicion ya que no usa la herencia
-// Composición: Un tipo incluye otro tipo (embeds) para reutilizar campos y métodos sin usar herencia clásica
+// Composicion: Un tipo incluye otro tipo (embeds) para reutilizar campos y metodos sin usar herencia clasica
 
 package main
 
@@ -92,7 +92,7 @@ package main // Define el punto de entrada
 
 import "fmt"
 
-// Tipo base con método
+// Tipo base con metodo
 type Base struct {
     tag string
 }
@@ -103,11 +103,11 @@ func (b Base) DescribeTag() string {
 
 // Container "compone" Base (embedded)
 type Container struct {
-    Base // campo anónimo: embedding / composición
+    Base // campo anonimo: embedding / composicion
     tag  string
 }
 
-// Container define su propia versión del método
+// Container define su propia version del metodo
 func (c Container) DescribeTag() string {
     return fmt.Sprintf("Container tag is %s", c.tag)
 }
@@ -129,10 +129,10 @@ func main() {
     fmt.Println(b.DescribeTag())        // Base tag is b's tag
     fmt.Println(co.DescribeTag())       // Container tag is co's tag
 
-    // Llamar explícitamente al método del Base embebido
+    // Llamar explicitamente al metodo del Base embebido
     fmt.Println(co.Base.DescribeTag())  // Base tag is b's tag
 
-    // Polimorfismo vía interfaz: tanto Base como Container implementan DescribeTag
+    // Polimorfismo via interfaz: tanto Base como Container implementan DescribeTag
     printTag(b)  // acepta Base
     printTag(co) // acepta Container porque tiene DescribeTag
 }

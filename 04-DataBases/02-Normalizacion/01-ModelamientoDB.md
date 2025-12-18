@@ -1,10 +1,10 @@
-# Modelo entidad relación
+# Modelo entidad relacion
 
-- Es un modelo que representa de manera sencilla los componentes de un sistema y cómo estos se relacionan entre sí. Su uso está principalmente en las bases de datos.
+- Es un modelo que representa de manera sencilla los componentes de un sistema y como estos se relacionan entre si. Su uso esta principalmente en las bases de datos.
 
-- Emplean rectángulos, diamantes, óvalos y líneas de conexión para mostrar la conexión de entidades.
+- Emplean rectangulos, diamantes, ovalos y lineas de conexion para mostrar la conexion de entidades.
 
-- Se debe hacer un modelo entidad relación para plasmar los requerimientos y entender mejor la situación.
+- Se debe hacer un modelo entidad relacion para plasmar los requerimientos y entender mejor la situacion.
 
 - **Entidad:**
 
@@ -13,11 +13,11 @@
 - **Tipos de entidad:**
 
   - Entidad fuerte.
-  - Entidad débil.
+  - Entidad debil.
 
-- **Relación:**
+- **Relacion:**
 
-  - Son vínculos entre entidades, muestra cómo estas interactúan entre ellas.
+  - Son vinculos entre entidades, muestra como estas interactuan entre ellas.
 
 - **Cardinalidad:**
 
@@ -38,12 +38,12 @@
   - Atributo compuesto.
   - Atributo derivado.
 
-# De entidad relación a tablas
+# De entidad relacion a tablas
 
-- Se debe tener en cuenta la cardinalidad de las tablas al pasar el diagrama entidad relación a un diagrama de tablas.
+- Se debe tener en cuenta la cardinalidad de las tablas al pasar el diagrama entidad relacion a un diagrama de tablas.
 
 - Una identidad se convierte en una tabla.
 
 - Cada campo es un atributo de la entidad.
 
-- En el caso de 1:N y 1:1, la clave primaria se convierte en un atributo de la otra entidad. En la relación N:M se crea una nueva entidad (principalmente el nombre de la relación se usa en la entidad).
+- En el caso de 1:N y 1:1, la clave primaria se convierte en un atributo de la otra entidad. En la relacion N:M se crea una nueva entidad (principalmente el nombre de la relacion se usa en la entidad).

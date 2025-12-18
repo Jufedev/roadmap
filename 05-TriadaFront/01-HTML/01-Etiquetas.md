@@ -2,11 +2,11 @@
 
 - `<!DOCTYPE html>`
 
-  - Hace que el navegador interprete el código
+  - Hace que el navegador interprete el codigo
 
 - `<html></html>`
 
-  - Raíz del archivo html
+  - Raiz del archivo html
 
 - `<!-- -->`
 
@@ -16,11 +16,11 @@
 
 - `<head>`
 
-  - Características no visibles
+  - Caracteristicas no visibles
 
 - `<title>`
 
-  - Título de la página
+  - Titulo de la pagina
 
 - `<meta />`
 
@@ -42,23 +42,23 @@
 
 - `<h1>`
 
-  - Título del contenido
+  - Titulo del contenido
 
 - `<h2><h3><h4><h5><h6>`
 
-  - Subtítulo del contenido
+  - Subtitulo del contenido
 
 - `<p>`
 
-  - Creación de párrafos
+  - Creacion de parrafos
 
 - `<pre>`
 
-  - Creación de párrafos (Se respeta espacios y saltos)
+  - Creacion de parrafos (Se respeta espacios y saltos)
 
 - `<hr>`
 
-  - Crea una separación
+  - Crea una separacion
 
 - `<br>`
 
@@ -66,13 +66,13 @@
 
 - `<dialog>`
 
-  - Información en forma de alerta (Se pueden poner títulos (h1), párrafos y botones)
+  - Informacion en forma de alerta (Se pueden poner titulos (h1), parrafos y botones)
 
 ## Links
 
 - `<a>`
 
-  - Crear hipervínculo
+  - Crear hipervinculo
 
 ## Contenido
 
@@ -82,17 +82,17 @@
 
 - `<iframe>`
 
-  - Creación de un iframe
+  - Creacion de un iframe
 
 - `<img />`
 
-  - Colocar imágenes
+  - Colocar imagenes
 
 ## Listas
 
 - `<ul>`
 
-  - Creación de una lista desordenada
+  - Creacion de una lista desordenada
 
 - `<li>`
 
@@ -100,7 +100,7 @@
 
 - `<ol>`
 
-  - Creación de una lista ordenada
+  - Creacion de una lista ordenada
 
 - `<li>`
 
@@ -112,33 +112,33 @@
 
 - `<dl>`
 
-  - Creación de una lista de descripción (Son como un diccionario)
+  - Creacion de una lista de descripcion (Son como un diccionario)
 
 - `<dt>`
 
-  - Titulo del término
+  - Titulo del termino
 
 - `<dd>`
 
-  - Detalle del término
+  - Detalle del termino
 
 ## Tablas
 
 - `<table>`
 
-  - Creación de una tabla
+  - Creacion de una tabla
 
 - `<caption>`
 
-  - Título por fuera de la tabla
+  - Titulo por fuera de la tabla
 
 - `<tr>`
 
-  - Creación de una fila
+  - Creacion de una fila
 
 - `<th>`
 
-  - Título de la tabla (Primera fila)
+  - Titulo de la tabla (Primera fila)
 
 - `<td>`
 
@@ -146,7 +146,7 @@
 
 - `<thead>`
 
-  - Hacer que el navegador reconozca los títulos
+  - Hacer que el navegador reconozca los titulos
 
 - `<tbody>`
 
@@ -160,7 +160,7 @@
 
 - `<main>`
 
-  - Contenido principal de la página (Contenido que no se repite)
+  - Contenido principal de la pagina (Contenido que no se repite)
 
 - `<section>`
 
@@ -168,7 +168,7 @@
 
 - `<details>`
 
-  - Hacer una sección de preguntas frecuentes
+  - Hacer una seccion de preguntas frecuentes
 
 - `<summary>`
 
@@ -176,7 +176,7 @@
 
 - `<article>`
 
-  - Contenido independiente (Tiene títulos y footer)
+  - Contenido independiente (Tiene titulos y footer)
 
 - `<aside>`
 
@@ -184,15 +184,15 @@
 
 - `<header>`
 
-  - Agrupa link, logos o imágenes
+  - Agrupa link, logos o imagenes
 
 - `<footer>`
 
-  - Contiene el copyright, información de contacto, como navegar en el sitio, links para volver al inicio, etc
+  - Contiene el copyright, informacion de contacto, como navegar en el sitio, links para volver al inicio, etc
 
 - `<nav>`
 
-  - Barra de navegación
+  - Barra de navegacion
 
 - `<div>`
 
@@ -200,13 +200,13 @@
 
 - `<span>`
 
-  - Selecciona una parte del código o del texto (No alterna nada)
+  - Selecciona una parte del codigo o del texto (No alterna nada)
 
 ## Formularios
 
 - `<form>`
 
-  - Creación de un formulario
+  - Creacion de un formulario
 
 - `<fieldset>`
 
@@ -214,7 +214,7 @@
 
 - `<legend>`
 
-  - Título del formulario
+  - Titulo del formulario
 
 - `<input>`
 
@@ -222,11 +222,11 @@
 
 - `<label>`
 
-  - Títulos para los inputs
+  - Titulos para los inputs
 
 - `<select>`
 
-  - Menú desplegable
+  - Menu desplegable
 
 - `<option>`
 
@@ -234,7 +234,7 @@
 
 - `<datalist>`
 
-  - Menú desplegable pero el usuario puede escribir
+  - Menu desplegable pero el usuario puede escribir
 
 - `<option>`
 
@@ -242,8 +242,8 @@
 
 - `<textarea>`
 
-  - Entrada de texto (Es más grande que el input)
+  - Entrada de texto (Es mas grande que el input)
 
 - `<button>`
 
-  - Crear un botón (button, reset, submit)
+  - Crear un boton (button, reset, submit)

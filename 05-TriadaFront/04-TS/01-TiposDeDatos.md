@@ -35,7 +35,7 @@ type Persona = {
 
 let juan: Persona = { nombre: 'Juan', edad: 91 }
 
-/* Aserción de tipos */
+/* Asercion de tipos */
 const imagen = document.getElementById('id')
 
 if (imagen instanceof Image) {

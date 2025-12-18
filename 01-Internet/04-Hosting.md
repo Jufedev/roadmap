@@ -1,13 +1,13 @@
-# ¿Qué es un Hosting?
+# ¿Que es un Hosting?
 
-- Es el servidor donde está alojada la página web, este servidor proporciona el espacio y los recursos para poner en marcha la página.
+- Es el servidor donde esta alojada la pagina web, este servidor proporciona el espacio y los recursos para poner en marcha la pagina.
 
 ### Tipos de hosting
 
-- **Shared Hosting:** Todo el servidor se comparte entre varias páginas.
+- **Shared Hosting:** Todo el servidor se comparte entre varias paginas.
 
 - **Cloud Hosting:** Hosting en la nube.
 
-- **Virtual Private Server:** Un servidor se divide en más servidores virtuales.
+- **Virtual Private Server:** Un servidor se divide en mas servidores virtuales.
 
-- **Dedicated Server:** Todo el servidor es usado por una única página.
+- **Dedicated Server:** Todo el servidor es usado por una unica pagina.

@@ -39,7 +39,7 @@
 
     - `git add NOMBREARCHIVO`
 
-  - Comprometer todos los archivos con una misma extensión
+  - Comprometer todos los archivos con una misma extension
 
     - `git add \*.EXTENSION`
 
@@ -63,7 +63,7 @@
 
 ### Ignorar archivos
 
-- Crear un archivo con extensión .gitignore y dentro de ese archivo escribir los archivos o rutas que no serán comprometidas en los cambios
+- Crear un archivo con extension .gitignore y dentro de ese archivo escribir los archivos o rutas que no seran comprometidas en los cambios
 
 - Crear el archivo
 
@@ -72,4 +72,4 @@
 - Ejemplos
   - .env
   - carpeta/
-  - \*\*/NOMBREARCHIVO (Ignorar el archivo sin importar la ubicación)
+  - \*\*/NOMBREARCHIVO (Ignorar el archivo sin importar la ubicacion)

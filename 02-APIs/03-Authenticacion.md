@@ -1,44 +1,44 @@
-- Autenticación:
+- Autenticacion:
 
-  - Proceso de comprobación de la identidad de un usuario o app que accede a las API.
-  - Se realiza mediante credenciales usuario y contraseña, un certificado o un inicio de sesión único.
+  - Proceso de comprobacion de la identidad de un usuario o app que accede a las API.
+  - Se realiza mediante credenciales usuario y contraseña, un certificado o un inicio de sesion unico.
 
-- Autorización:
+- Autorizacion:
 
-  - Proceso de determinar si un usuario o una aplicación tiene permiso para acceder a una API.
+  - Proceso de determinar si un usuario o una aplicacion tiene permiso para acceder a una API.
   - Se realiza a traves de tokes.
 
-## Autenticación básica
+## Autenticacion basica
 
-- El cliente solicita un recurso al servidor, el servidor verifica la autorización en la solicitud, dado que es la primera solicitud no se encuentra dicha autorización.
+- El cliente solicita un recurso al servidor, el servidor verifica la autorizacion en la solicitud, dado que es la primera solicitud no se encuentra dicha autorizacion.
 
-- El navegador al notar el encabezado de no autorizado mostrara una ventana emergente de autenticación.
+- El navegador al notar el encabezado de no autorizado mostrara una ventana emergente de autenticacion.
 
-- El usuario envía las credenciales a traves de la ventana emergente y el navegador codificara automáticamente las credenciales.
+- El usuario envia las credenciales a traves de la ventana emergente y el navegador codificara automaticamente las credenciales.
 
 - El servidor decodificara y verificara las credenciales, enviara la respuesta al cliente.
 
 ## OAuth
 
-- En lugar de un usuario y una contraseña, el usuario envía un ID de clave de API y un secreto.
+- En lugar de un usuario y una contraseña, el usuario envia un ID de clave de API y un secreto.
 
-- un usuario se comunica con su proveedor de identidades y el proveedor genera un token firmado criptográficamente que entrega a la aplicación para autenticar al usuario.
+- un usuario se comunica con su proveedor de identidades y el proveedor genera un token firmado criptograficamente que entrega a la aplicacion para autenticar al usuario.
 
-- Siempre que la aplicación y el proveedor tengan la relación de confianza con la aserción firmada se puede hacer la autorización.
+- Siempre que la aplicacion y el proveedor tengan la relacion de confianza con la asercion firmada se puede hacer la autorizacion.
 
 - Permite que las aplicaciones obtengan acceso limitado a los datos de un usuario sin revelar la contraseña de un usuario.
 
 - Roles:
-  - Propietario del recurso: el propietario del recurso es el usuario que autoriza a una aplicación a acceder a su cuenta.
-  - Cliente: El cliente es la aplicación que quiere acceder a la cuenta del usuario.
+  - Propietario del recurso: el propietario del recurso es el usuario que autoriza a una aplicacion a acceder a su cuenta.
+  - Cliente: El cliente es la aplicacion que quiere acceder a la cuenta del usuario.
   - Servidor de recursos: el servidor de recursos aloja las cuentas de usuario protegidas.
-  - Servidor de autorización: El servidor de autorización verifica la identidad del usuario y, a continuación, emite tokens de acceso a la aplicación.
+  - Servidor de autorizacion: El servidor de autorizacion verifica la identidad del usuario y, a continuacion, emite tokens de acceso a la aplicacion.
 
 ## JWT
 
-- JSON Web Token es un estándar que define una forma compacta y autónoma de transmitir información de forma segura.
+- JSON Web Token es un estandar que define una forma compacta y autonoma de transmitir informacion de forma segura.
 
-- La información esta firmada digitalmente, se puede firmar mediante un secreto (HMAC) o un par clave publica/privada (RSA o ECDSA).
+- La informacion esta firmada digitalmente, se puede firmar mediante un secreto (HMAC) o un par clave publica/privada (RSA o ECDSA).
 
 - Estructura:
 
@@ -55,7 +55,7 @@
 
       1. Claims registradas:
 
-         - Están predefinidas, no son obligatorias pero si recomendables, como lo son iss (emisor), exp (tiempo de expiración), sub (sujeto), aud (audiencia), y otros.
+         - Estan predefinidas, no son obligatorias pero si recomendables, como lo son iss (emisor), exp (tiempo de expiracion), sub (sujeto), aud (audiencia), y otros.
 
       1. Claims publicas:
 
@@ -63,7 +63,7 @@
 
       1. Claims privadas:
 
-         - Creadas para compartir información entre partes que acuerdan usarlas y no son ni publicas ni registradas.
+         - Creadas para compartir informacion entre partes que acuerdan usarlas y no son ni publicas ni registradas.
 
   - Firma:
 
@@ -73,7 +73,7 @@
 
 ## Cookie based auth
 
-- El cliente envía credenciales y el servidor las compara con las credenciales que tiene en la base de datos.
+- El cliente envia credenciales y el servidor las compara con las credenciales que tiene en la base de datos.
 
 - El servidor genera un token de acceso el cual podemos guardarlo en la DB o adjuntarlo a una cookie de respuesta.
 

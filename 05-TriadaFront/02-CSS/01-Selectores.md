@@ -16,7 +16,7 @@
 
 - ETIQUETA.CLASS
 
-  - Seleccionar una etiqueta con una clase específica
+  - Seleccionar una etiqueta con una clase especifica
 
 - ETIQUETA ETIQUETAREQUERIDA
 
@@ -36,4 +36,4 @@
 
 - ETIQUETA ~ ETIQUETA
 
-  - Seleccionar las etiquetas en el mismo nivel (Debe estar después de la primera etiqueta)
+  - Seleccionar las etiquetas en el mismo nivel (Debe estar despues de la primera etiqueta)

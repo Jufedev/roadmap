@@ -25,11 +25,11 @@
 - outline:
 
   - Funciona igual que el borde
-  - Va después del borde (No cambia el ancho)
+  - Va despues del borde (No cambia el ancho)
 
 - outline-offset: NUM
 
-  - Separación entre el outline y el border
+  - Separacion entre el outline y el border
 
 - box-sizing: border-box
 
@@ -44,7 +44,7 @@
   - Alinear verticalmente de acuerdo a una caja
 
 - box-shadow: NUM1, NUM2, NUM3, NUM4, COLOR
-  - Crear un sombreado a una sección
+  - Crear un sombreado a una seccion
   - NUM1 movimiento derecha, NUM2 movimiento abajo y NUM3 difuminado
-  - NUM4 propagación
-  - Número negativos posición inversa (izq y arriba)
+  - NUM4 propagacion
+  - Numero negativos posicion inversa (izq y arriba)

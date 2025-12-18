@@ -1,22 +1,22 @@
 - display: grid
 
-  - Colocárselo al padre
+  - Colocarselo al padre
   - Bidimensional (Filas y columnas)
 
   - repeat(NUM, NUM NUM …)
 
     - Repetir las columnas que queremos
-    - Primer número la cantidad
+    - Primer numero la cantidad
 
       - auto-fill
-        - Poner columnas que cumpla con el mínimo (Rellena)
+        - Poner columnas que cumpla con el minimo (Rellena)
       - auto-fit
         - Poner columnas que rellenen todo el espacio (Estira)
 
-    - Segundo número el tamaño
-      - Se pueden dos o más tamaños
+    - Segundo numero el tamaño
+      - Se pueden dos o mas tamaños
       - minmax(NUM, NUM)
-        - Establecer un tamaño mínimo y máximo
+        - Establecer un tamaño minimo y maximo
 
 - grid-template-columns: NUM NUM …
 
@@ -30,23 +30,23 @@
 
 - grid-auto-rows: NUM
 
-  - Tamaño de la fila generada automáticamente
+  - Tamaño de la fila generada automaticamente
 
 - grid-auto-columns: NUM
 
-  - Tamaño de la columna generada automáticamente
+  - Tamaño de la columna generada automaticamente
 
 - grid-column-gap: NUM
 
-  - Separación entre las columnas
+  - Separacion entre las columnas
 
 - grid-row-gap: NUM
 
-  - Separación entre las filas
+  - Separacion entre las filas
 
 - gap: NUM NUM
 
-  - Separación en una sola línea (Filas, Columnas)
+  - Separacion en una sola linea (Filas, Columnas)
 
 - grid-column-start: NUM
 
@@ -78,33 +78,33 @@
 
 - grid-template-areas:
 
-  - Distribuir las áreas por el grid
+  - Distribuir las areas por el grid
   - “STRING STRING …”
   - “STRING STRING …”
   - “...”
 
 - justify-items: VAL
 
-  - Alinear en línea los elementos (Horizontal)
+  - Alinear en linea los elementos (Horizontal)
   - center, start, end
 
 - justify-self: VAL
 
-  - Alinear sólo ese elemento
+  - Alinear solo ese elemento
 
 - align-items: VAL
 
-  - Alinear en línea los elementos (Vertical)
+  - Alinear en linea los elementos (Vertical)
   - center, start, end
 
 - justify-content: VAL
 
-  - Alinear en línea los elementos (Horizontal)
+  - Alinear en linea los elementos (Horizontal)
   - center, start, end
 
 - align-content: VAL
 
-  - Alinear en línea los elementos (Vertical)
+  - Alinear en linea los elementos (Vertical)
   - center, start, end
 
 - place-content: center

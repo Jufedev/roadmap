@@ -1,13 +1,13 @@
-- Angular optimiza las imágenes por nosotros
+- Angular optimiza las imagenes por nosotros
 
-- En el componente se debe importar la funcionalidad que nos ayuda con las imágenes
+- En el componente se debe importar la funcionalidad que nos ayuda con las imagenes
 
   - `imports:[NgOptimizedImage]`
 
-- Importado dinámico
+- Importado dinamico
 
   - `<img [ngSrc]="imageURL"/>` _imageURL es una variable_
 
-- Importado estático
+- Importado estatico
 
   - `<img ngSrc="rutaImagen">`

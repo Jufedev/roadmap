@@ -4,7 +4,7 @@
 
 - Se pueden usar como un tipo
 
-- Se transpilan a código JS si NO se usa el const al inicio.
+- Se transpilan a codigo JS si NO se usa el const al inicio.
 
 ```typescript
 enum ejemplo {

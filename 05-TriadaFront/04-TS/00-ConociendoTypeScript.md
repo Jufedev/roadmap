@@ -2,7 +2,7 @@
 
 - El TS se transpila en JS.
 
-- No funciona en ejecución.
+- No funciona en ejecucion.
 
 # Algunos datos sobre el lenguaje
 

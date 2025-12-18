@@ -1,6 +1,6 @@
 - Por medio de servicios se inyectan las dependencias
 
-- Inyección por medio de métodos
+- Inyeccion por medio de metodos
 
   - ```JavaScript
     @Component
@@ -10,7 +10,7 @@
     }
     ```
 
-- Inyección por medio del constructor
+- Inyeccion por medio del constructor
 
   - ```JavaScript
     constructor(private variable: tipo) {

@@ -2,7 +2,7 @@
 
 - Es un servicio basado en la nube que aloja un sistema de control de versiones (VCS) llamado Git.
 
-# Términos usados
+# Terminos usados
 
 - **Pull requests (PR):**
 

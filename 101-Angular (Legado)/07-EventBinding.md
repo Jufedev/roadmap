@@ -1,4 +1,4 @@
-- Invocar funciones al ejecutar alguna acción como un click
+- Invocar funciones al ejecutar alguna accion como un click
 
   - `(evento)="funcion()"`
 

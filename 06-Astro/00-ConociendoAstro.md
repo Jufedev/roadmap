@@ -1,4 +1,4 @@
-# ¿Qué es?
+# ¿Que es?
 
 - Es un framework de javascript 
 

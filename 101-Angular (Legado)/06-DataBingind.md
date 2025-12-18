@@ -1,4 +1,4 @@
-- Acceder a valores de variables y usarlos como parámetros de propiedades en el HTML, generando asi dinamismo
+- Acceder a valores de variables y usarlos como parametros de propiedades en el HTML, generando asi dinamismo
 
   - `<etiqueta [PropiedadHTML]="variable">`
 

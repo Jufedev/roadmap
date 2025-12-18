@@ -11,7 +11,7 @@ BEGIN
 END
 ELSE
 BEGIN
-	PRINT 'No se encontró el resultado'
+	PRINT 'No se encontro el resultado'
 END
 
 IF EXISTS(SELECT * FROM Paciente WHERE idPaciente=@idPaciente)

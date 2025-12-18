@@ -6,11 +6,11 @@
 
 - cm
 
-  - Centímetro
+  - Centimetro
 
 - mm
 
-  - Milímetro
+  - Milimetro
 
 - in
 
@@ -45,11 +45,11 @@
 - rem
 
   - 1rem = 16px
-  - Relativo a la raíz (Al tamaño del HTML)
+  - Relativo a la raiz (Al tamaño del HTML)
 
 - em
 
   - 1em = 16px
   - Propiedades que cambian con el font-size del padre si no tiene un tamaño
-  - Si le pongo 20px al font-size del HTML 1rem sería 20px no 16px
-  - Si el padre tiene un font-size de 20px 2em sería 40px no 32px
+  - Si le pongo 20px al font-size del HTML 1rem seria 20px no 16px
+  - Si el padre tiene un font-size de 20px 2em seria 40px no 32px

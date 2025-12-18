@@ -1,6 +1,6 @@
 - docker images
 
-  - Ver imágenes instaladas
+  - Ver imagenes instaladas
 
 - docker push IMAGEN
 
@@ -29,4 +29,4 @@
 - docker tag USERNAME/IMAGEN:TAG CONTAINERID
 
   - Subir una imagen a docker hub
-  - El tag es la versión, v1, v2, etc
+  - El tag es la version, v1, v2, etc

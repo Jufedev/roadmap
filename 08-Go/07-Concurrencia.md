@@ -59,13 +59,13 @@ fmt.Println(<-c)
 func main() {
     var wg sync.WaitGroup
 
-    // Definimos cuántas goroutines vamos a esperar
+    // Definimos cuantas goroutines vamos a esperar
     tareas := 3
     wg.Add(tareas)
 
     for i := 1; i <= tareas; i++ {
         go func(id int) {
-            defer wg.Done() // Marca que esta goroutine terminó
+            defer wg.Done() // Marca que esta goroutine termino
             fmt.Printf("Tarea %d iniciada...\n", id)
             time.Sleep(time.Duration(id) * time.Second) // Simula trabajo
             fmt.Printf("Tarea %d finalizada.\n", id)
@@ -81,7 +81,7 @@ func main() {
 
     // Nuevo proceso independiente
     go func() {
-        fmt.Println("Proceso adicional ejecutándose después del WaitGroup.")
+        fmt.Println("Proceso adicional ejecutandose despues del WaitGroup.")
     }()
 
     // Pausa para que se vea la salida del proceso adicional
@@ -89,7 +89,7 @@ func main() {
 }
 
 
-// Multiplexación de Canales | Para que un canal no bloquee el otro
+// Multiplexacion de Canales | Para que un canal no bloquee el otro
 func doSomething(i time.Duration, c chan<- int, param int) {
 	time.Sleep(i)
 	c <- param

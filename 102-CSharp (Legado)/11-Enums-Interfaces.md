@@ -18,7 +18,7 @@ public interface IOperaciones{
   int A { get; set; }
 }
 
-class Operaciones: IOperaciones{ // Obliga a la clase a implementar los métodos de la interfaz
+class Operaciones: IOperaciones{ // Obliga a la clase a implementar los metodos de la interfaz
 
   public Operaciones(int a){
     A = a;

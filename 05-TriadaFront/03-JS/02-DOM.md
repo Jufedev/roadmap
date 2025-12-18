@@ -9,7 +9,7 @@
 
 - Document
 
-  - Nodo raíz
+  - Nodo raiz
 
 - Element
 
@@ -27,7 +27,7 @@
 
   - Declaraciones doctype y comentarios
 
-### Métodos de selección
+### Metodos de seleccion
 
 - document.getElementById(“ID”)
 
@@ -46,9 +46,9 @@
 - document.querySelectorAll(“#ID/.class”)
   - Seleccionar todas las etiquetas
   - Devuelve un NodeList
-  - Se puede acceder con el índice VAR - 0]
+  - Se puede acceder con el indice VAR - 0]
 
-### Métodos de atributos
+### Metodos de atributos
 
 - VAR.setAttribute(“ATTRIBUTE”, “VAL”)
 
@@ -61,7 +61,7 @@
 - VAR.removeAttribute(“ATTRIBUTE”)
   - Remover un atributo de un elemento
 
-### Métodos de classList
+### Metodos de classList
 
 - VAR.classList.add(“CLASE”)
 
@@ -73,7 +73,7 @@
 
 - VAR.classList.item(NUM)
 
-  - Obtener la clase del índice establecido
+  - Obtener la clase del indice establecido
 
 - VAR.classList.contains(“CLASE”)
 
@@ -86,7 +86,7 @@
 - VAR.classList.replace(“CLASE”, “CLASE”)
   - Reemplaza la clase por otra
 
-### Métodos de texto
+### Metodos de texto
 
 - VAR.textContent
 
@@ -95,18 +95,18 @@
 
 - VAR.innerHTML
 
-  - Devuelve el texto del contenido con todas las etiquetas que estén dentro
+  - Devuelve el texto del contenido con todas las etiquetas que esten dentro
   - Agrega texto al contenido
 
 - VAR.outerHTML
-  - Devuelve el texto del contenido con todas las etiquetas que estén involucradas, incluyendo la propia etiqueta
+  - Devuelve el texto del contenido con todas las etiquetas que esten involucradas, incluyendo la propia etiqueta
 
-### Métodos de creación
+### Metodos de creacion
 
 - document.createElement(“ETIQUETA”)
 
   - Crear un elemento HTML
-  - Debe ser en mayúsculas
+  - Debe ser en mayusculas
 
 - document.createTextNode(“STR”)
 
@@ -123,7 +123,7 @@
 
 - VAR.lastChild
 
-  - Obtener el último hijo del elemento
+  - Obtener el ultimo hijo del elemento
 
 - VAR.firstElementChild
 
@@ -131,7 +131,7 @@
 
 - VAR.lastElementChild
 
-  - Obtener el último hijo etiqueta del elemento
+  - Obtener el ultimo hijo etiqueta del elemento
 
 - VAR.childNodes
 
@@ -170,4 +170,4 @@
   - Obtener el anterior hermano
 
 - VAR.closest(“.CLASS/#ID”)
-  - Obtener el padre más cercano con el nombre
+  - Obtener el padre mas cercano con el nombre

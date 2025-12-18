@@ -4,9 +4,9 @@
 
 ```yaml
 steps:
-  - name: Mostrar información del contexto github
+  - name: Mostrar informacion del contexto github
     run: |
-      echo "Evento que activó: ${{ github.event_name }}" # push, pull_request, workflow_dispatch, etc.
+      echo "Evento que activo: ${{ github.event_name }}" # push, pull_request, workflow_dispatch, etc.
       
       echo "Ref: ${{ github.ref }}" # Ej: refs/heads/main o refs/tags/v1.0.0
       
@@ -14,7 +14,7 @@ steps:
       
       echo "SHA del commit: ${{ github.sha }}" # Hash del commit asociado al run
       
-      echo "Usuario que activó: ${{ github.actor }}" # Ej: owner
+      echo "Usuario que activo: ${{ github.actor }}" # Ej: owner
       
       echo "Repositorio: ${{ github.repository }}"  # Ej: owner/repo-name
       
@@ -22,7 +22,7 @@ steps:
       
       echo "Workflow: ${{ github.workflow }}" # Nombre del workflow
       
-      echo "Run ID: ${{ github.run_id }}" # ID de ejecución
+      echo "Run ID: ${{ github.run_id }}" # ID de ejecucion
 
 ```
 
@@ -30,22 +30,22 @@ steps:
 
 ```yaml
 env:
-  MI_VARIABLE: "valor_estatico"  # Variable estática definida en el workflow
-  VARIABLE_DINAMICA: ${{ github.sha }}  # Variable con expresión (se evalúa en runtime)
+  MI_VARIABLE: "valor_estatico"  # Variable estatica definida en el workflow
+  VARIABLE_DINAMICA: ${{ github.sha }}  # Variable con expresion (se evalua en runtime)
 
 steps:
   - name: Usar contexto env
     run: |
-      echo "Variable estática: ${{ env.MI_VARIABLE }}"  # Accede a variable definida arriba
+      echo "Variable estatica: ${{ env.MI_VARIABLE }}"  # Accede a variable definida arriba
       
-      echo "Variable dinámica: ${{ env.VARIABLE_DINAMICA }}"  # Valor evaluado (SHA)
+      echo "Variable dinamica: ${{ env.VARIABLE_DINAMICA }}"  # Valor evaluado (SHA)
       
       echo "Variable del sistema: ${{ env.GITHUB_TOKEN }}"  # Variables predefinidas como PATH, etc.
 ```
 
 - Contexto **secrets**
 
-    - Nota: Los secrets son sensibles y GitHub los enmascara automáticamente en los logs
+    - Nota: Los secrets son sensibles y GitHub los enmascara automaticamente en los logs
 
 ```yaml
 steps:
@@ -60,7 +60,7 @@ steps:
 
 ```yaml
 steps:
-  - name: Información del runner
+  - name: Informacion del runner
     run: |
       echo "Sistema operativo: ${{ runner.os }}"  # Ej: Linux, Windows, macOS
       
@@ -70,7 +70,7 @@ steps:
       
       echo "Directorio temporal: ${{ runner.temp }}"  # Ruta al directorio temporal
       
-      echo "Directorio de trabajo: ${{ runner.workspace }}"  # Ruta donde está el código clonado
+      echo "Directorio de trabajo: ${{ runner.workspace }}"  # Ruta donde esta el codigo clonado
 ```
 
 - Contexto **steps**
@@ -84,12 +84,12 @@ steps:
     run: |
       echo "Output del step anterior: ${{ steps.generar_saludo.outputs.saludo }}"  # Accede al output definido
       
-      echo "Contexto completo del step: ${{ toJSON(steps.generar_saludo) }}"  # Útil para debug
+      echo "Contexto completo del step: ${{ toJSON(steps.generar_saludo) }}"  # util para debug
 ```
 
 - Contexto **job**
 
-    - Nota: job.status solo está disponible en steps de post-ejecución o con 'always()'
+    - Nota: job.status solo esta disponible en steps de post-ejecucion o con 'always()'
 
 ```yaml
 jobs:

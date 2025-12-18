@@ -1,4 +1,4 @@
-- Mirar en qué rama estamos trabajando
+- Mirar en que rama estamos trabajando
 
   - `git branch`
 
@@ -34,7 +34,7 @@
 
   - `git cherry-pick IDCOMMIT IDCOMMIT …`
 
-- Muestra el tag más cercano
+- Muestra el tag mas cercano
 
   - `git describe RAMA`
 
@@ -46,11 +46,11 @@
 
   - `git switch tags/NOMBRE`
 
-- Cambiar una rama a un commit específico
+- Cambiar una rama a un commit especifico
 
   - `git branch -f RAMA IDCOMMIT`
 
-- Devuelve hasta el commit deseado, funciona para adelante y para atrás
+- Devuelve hasta el commit deseado, funciona para adelante y para atras
 
   - `git reset IDCOMMIT`
 
@@ -58,6 +58,6 @@
 
   - `git revert IDCOMMIT`
 
-- Crear una nueva rama (Mala práctica)
+- Crear una nueva rama (Mala practica)
 
   - `git checkout -b VAL`

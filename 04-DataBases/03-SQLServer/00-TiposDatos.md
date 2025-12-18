@@ -1,12 +1,12 @@
-- **Numéricos:**
+- **Numericos:**
 
-  - Int (-2.147.483.648 a 2.147.483.647), Tinyint (0 a 255), Bit (0 ó 1)
+  - Int (-2.147.483.648 a 2.147.483.647), Tinyint (0 a 255), Bit (0 o 1)
 
   - Decimal (Precision, Escala), Money (8 bytes)
 
 - **Texto:**
 
-  - Char (1 byte por carácter), Varchar (1 byte por carácter variable)
+  - Char (1 byte por caracter), Varchar (1 byte por caracter variable)
 
 - **Fecha y Hora:**
 

@@ -1,8 +1,8 @@
-- Controlar el renderizado de acuerdo a una condición o en caso de tener arrays
+- Controlar el renderizado de acuerdo a una condicion o en caso de tener arrays
 
-  - `@if(condición){}`
+  - `@if(condicion){}`
 
-  - `@elseif(condición){}`
+  - `@elseif(condicion){}`
 
   - `@else{}`
 

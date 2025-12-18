@@ -1,8 +1,8 @@
-# Anatomía de una Plantilla de CloudFormation (Formato YAML)
+# Anatomia de una Plantilla de CloudFormation (Formato YAML)
 
 ## 1. `AWSTemplateFormatVersion`
 
-- **Propósito**: Especifica la versión del formato de la plantilla de CloudFormation que se usa.
+- **Proposito**: Especifica la version del formato de la plantilla de CloudFormation que se usa.
 
 - **Uso**: Clave de nivel superior requerida. Asegura compatibilidad con el servicio de CloudFormation.
 
@@ -11,26 +11,26 @@
         AWSTemplateFormatVersion: '2010-09-09'
       ```
 
-Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera línea en la plantilla.
+Notas: La version mas comunmente usada es '2010-09-09'. Debe ser la primera linea en la plantilla.
 
 
 ## 2. `Description`
 
-- **Propósito**: Proporciona una descripción textual del propósito o contenidos de la plantilla.
+- **Proposito**: Proporciona una descripcion textual del proposito o contenidos de la plantilla.
 
-- **Uso**: Opcional. Ayuda a los usuarios a entender la intención de la plantilla.
+- **Uso**: Opcional. Ayuda a los usuarios a entender la intencion de la plantilla.
 
 - **Ejemplo (YAML)**:
     - ```yaml
-        Description: 'Depliega un VPC con subredes públicas y privadas'
+        Description: 'Depliega un VPC con subredes publicas y privadas'
       ```
 
 
 ## 3. `Metadata`
 
-- **Propósito**: Contiene información adicional sobre la plantilla que no es usada directamente por CloudFormation pero puede consumirse por herramientas o recursos personalizados.
+- **Proposito**: Contiene informacion adicional sobre la plantilla que no es usada directamente por CloudFormation pero puede consumirse por herramientas o recursos personalizados.
 
-- **Uso**: Opcional. Útil para documentación, herramientas o procesamiento personalizado.
+- **Uso**: Opcional. util para documentacion, herramientas o procesamiento personalizado.
 
 - **Ejemplo (YAML)**:
     - ```yaml
@@ -42,9 +42,9 @@ Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera l
 
 ## 4. `Parameters`
 
-- **Propósito**: Declara valores de entrada que pueden proporcionarse al crear o actualizar un stack, haciendo las plantillas reutilizables y configurables.
+- **Proposito**: Declara valores de entrada que pueden proporcionarse al crear o actualizar un stack, haciendo las plantillas reutilizables y configurables.
 
-- **Uso**: Opcional pero altamente recomendado. Los parámetros pueden referenciarse en Resources, Conditions y Outputs.
+- **Uso**: Opcional pero altamente recomendado. Los parametros pueden referenciarse en Resources, Conditions y Outputs.
 
 - **Ejemplo (YAML)**:
     - ```yaml
@@ -66,9 +66,9 @@ Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera l
 
 ## 5. `Mappings`
 
-- **Propósito**: Define tablas de búsqueda (pares clave-valor) para datos de configuración estática, como configuraciones específicas de región o entorno.
+- **Proposito**: Define tablas de busqueda (pares clave-valor) para datos de configuracion estatica, como configuraciones especificas de region o entorno.
 
-- **Uso**: Opcional. Usado con la función intrínseca Fn::FindInMap para recuperar valores dinámicamente.
+- **Uso**: Opcional. Usado con la funcion intrinseca Fn::FindInMap para recuperar valores dinamicamente.
 
 - **Ejemplo (YAML)**:
     - ```yaml
@@ -87,9 +87,9 @@ Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera l
 
 ## 6. `Conditions`
 
-- **Propósito**: Define expresiones booleanas que determinan si ciertos recursos o propiedades se crean o configuran.
+- **Proposito**: Define expresiones booleanas que determinan si ciertos recursos o propiedades se crean o configuran.
 
-- **Uso**: Opcional. Las condiciones se evalúan durante la creación/actualización del stack y pueden referenciar parámetros u otras condiciones.
+- **Uso**: Opcional. Las condiciones se evaluan durante la creacion/actualizacion del stack y pueden referenciar parametros u otras condiciones.
 
 - **Ejemplo (YAML)**:
     - ```yaml
@@ -110,9 +110,9 @@ Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera l
 
 ## 7. `Transform`
 
-- **Propósito**: Instruye a CloudFormation a procesar la plantilla usando una transformación específica, como AWS SAM para aplicaciones serverless o AWS::Include para plantillas modulares.
+- **Proposito**: Instruye a CloudFormation a procesar la plantilla usando una transformacion especifica, como AWS SAM para aplicaciones serverless o AWS::Include para plantillas modulares.
 
-- **Uso**: Opcional. Aplicado a nivel superior para modificar cómo se interpreta la plantilla.
+- **Uso**: Opcional. Aplicado a nivel superior para modificar como se interpreta la plantilla.
 
 - **Ejemplo (YAML)**:
     - ```yaml
@@ -130,9 +130,9 @@ Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera l
 
 ## 8. `Resources`
 
-- **Propósito**: La sección núcleo donde se definen recursos de AWS (por ejemplo, instancias EC2, buckets S3, VPCs).
+- **Proposito**: La seccion nucleo donde se definen recursos de AWS (por ejemplo, instancias EC2, buckets S3, VPCs).
 
-- **Uso**: Requerida. Cada recurso tiene un ID lógico, tipo y propiedades.
+- **Uso**: Requerida. Cada recurso tiene un ID logico, tipo y propiedades.
 
 - **Ejemplo (YAML)**:
     - ```yaml
@@ -150,9 +150,9 @@ Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera l
 
 ## 9. `Outputs`
 
-- **Propósito**: Declara valores retornados al describir un stack, como IDs de recursos, URLs u otra información útil.
+- **Proposito**: Declara valores retornados al describir un stack, como IDs de recursos, URLs u otra informacion util.
 
-- **Uso**: Opcional. Los outputs pueden referenciar atributos de recursos o pseudo-parámetros.
+- **Uso**: Opcional. Los outputs pueden referenciar atributos de recursos o pseudo-parametros.
 
 - **Ejemplo (YAML)**:
     - ```yaml
@@ -168,9 +168,9 @@ Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera l
 
 ## 10. `Rules`
 
-- **Propósito**: Valida valores de parámetros o combinaciones durante la creación/actualización del stack para enforces restricciones.
+- **Proposito**: Valida valores de parametros o combinaciones durante la creacion/actualizacion del stack para enforces restricciones.
 
-- **Uso**: Opcional. Ayuda a prevenir configuraciones inválidas.
+- **Uso**: Opcional. Ayuda a prevenir configuraciones invalidas.
 
 - **Ejemplo (YAML)**:
     - ```yaml
@@ -178,7 +178,7 @@ Notas: La versión más comúnmente usada es '2010-09-09'. Debe ser la primera l
         - Rule: CheckInstanceType
             Assertions:
             - Assert: !Not [ !Equals [!Ref InstanceType, t2.micro] ]
-                AssertDescription: t2.micro no está permitido
+                AssertDescription: t2.micro no esta permitido
         - Rule: EnvironmentCheck
             Assertions:
             - Assert: !Or [ !Condition IsDevEnvironment, !Condition CreateProdResources ]

@@ -11,7 +11,7 @@ CREATE TABLE Paciente(
 	idPais char(3) NOT NULL,
 	telefono varchar(20) NOT NULL,
 	observacion varchar(1000) NOT NULL,
-	CONSTRAINT PK_idPaciente PRIMARY KEY (idPaciente) -- constraint hace que se cree un nombre único para ese id
+	CONSTRAINT PK_idPaciente PRIMARY KEY (idPaciente) -- constraint hace que se cree un nombre unico para ese id
 )
 
 CREATE TABLE HistoriaPaciente(
@@ -70,8 +70,8 @@ SET @otraVariable = ISNULL(@ordenamiento, 'Valor nulo')
 PRINT @ordenamiento
 
 
--- Ejemplo de SP para simplificar la creación de un Paciente (se debería comprobar el DNI con un parámetro)
--- Colocar la precision de los VARCHAR o si no solo tomara el primer carácter
+-- Ejemplo de SP para simplificar la creacion de un Paciente (se deberia comprobar el DNI con un parametro)
+-- Colocar la precision de los VARCHAR o si no solo tomara el primer caracter
 ALTER PROC SP_InsertPaciente(
 	@nombre VARCHAR,
 	@apellido VARCHAR,
@@ -135,11 +135,11 @@ END
 SELECT * FROM dbo.listaPaises() -- Invocar funciones tipo tabla
 
 
--- Tablas temporales (almacenadas en memoria (perdura en la ejecución de la querie))
+-- Tablas temporales (almacenadas en memoria (perdura en la ejecucion de la querie))
 DECLARE @tablaTemp TABLE (id INT IDENTITY(1,1), pais VARCHAR(50))
 
 
--- Tablas temporales físicas (almacenadas en disco (perdura en la ejecución del servicio))
+-- Tablas temporales fisicas (almacenadas en disco (perdura en la ejecucion del servicio))
 -- Si se reinicia el servicio se elimina la tabla
 CREATE TABLE #Paciente(
 	idPaciente INT IDENTITY(1,1) NOT NULL,
@@ -149,7 +149,7 @@ CREATE TABLE #Paciente(
 
 
 -- Vistas (guardar consultas especificas)
--- En procesos grandes ayudan a ahorrar código (funciona como si fuera una tabla)
+-- En procesos grandes ayudan a ahorrar codigo (funciona como si fuera una tabla)
 CREATE VIEW PacientesYTurnos AS
 
 SELECT * FROM Paciente P

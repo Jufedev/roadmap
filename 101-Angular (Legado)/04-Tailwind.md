@@ -2,7 +2,7 @@
 
   - `pnpm install -D tailwindcss postcss autoprefixer`
 
-- Inicializar el archivo de configuración de tailwind
+- Inicializar el archivo de configuracion de tailwind
 
   - `pnpm dlx tailwindcss init`
 

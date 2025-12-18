@@ -9,6 +9,6 @@ type Persona = {
 
 let juan: Persona = { id: '', nombre: 'Juan', edad: 91 }
 
-// Si existe el valor se ejecuta el método
+// Si existe el valor se ejecuta el metodo
 juan.aLive?.toString()
 ```

@@ -1,14 +1,14 @@
 ## Tamaños
 
-- height: NÚM
+- height: NuM
 
   - Alto del elemento (Caja del texto)
 
-- line-height: NÚM
+- line-height: NuM
 
   - Alto del elemento (Del techo al piso del texto)
 
-- width: NÚM
+- width: NuM
 
   - Ancho del elemento (Caja del texto)
 
@@ -18,7 +18,7 @@
 
 - max-width:NUM
 
-  - Ancho máximo que puede tener el elemento
+  - Ancho maximo que puede tener el elemento
 
 - scale: NUM
 
@@ -28,7 +28,7 @@
 
 - display:VAL
 
-  - Ubicación de los elementos
+  - Ubicacion de los elementos
   - block, inline (no se puede modificar margin ni padding), none, inline-block (si se puede modificar margin y padding)
 
 - float: VAL
@@ -43,16 +43,16 @@
 
 - position: VAL
 
-  - Posición en la pantalla
+  - Posicion en la pantalla
   - static (no se puede mover)
   - relative (se puede mover) (genera un campo) (Genera un punto de referencia para los hijos)
   - absolute (se puede mover) (no genera el campo)
   - fixed (se queda de manera fija en el viewport)
-  - sticky (combinación de relative y fixed)
+  - sticky (combinacion de relative y fixed)
 
 - z-index: NUM
 
-  - Superposición de los elementos
+  - Superposicion de los elementos
 
 ## Textos
 
@@ -87,7 +87,7 @@
 
 - text-overflow: ellipsis
 
-  - Tres puntos al final del párrafo si no cabe todo
+  - Tres puntos al final del parrafo si no cabe todo
 
 - text-align:VAL
 
@@ -103,7 +103,7 @@
 
   - Crear sombra a un texto
   - NUM1 movimiento derecha, NUM2 movimiento abajo y NUM3 difuminado
-  - Número negativos posición inversa (izq y arriba)
+  - Numero negativos posicion inversa (izq y arriba)
 
 - text-transform: STYLE
 
@@ -112,7 +112,7 @@
 
 - text-indent: NUM
 
-  - Indentación del párrafo (Como la sangría)
+  - Indentacion del parrafo (Como la sangria)
 
 - letter-spacing: NUM
 
@@ -129,16 +129,16 @@
 
 - list-style-position: VAL
 
-  - Modifica la posición de los puntos
+  - Modifica la posicion de los puntos
 
 - white-space:STYLE
 
-  - Control de saltos de líneas
+  - Control de saltos de lineas
   - nowrap, normal
 
 - overflow: VAL
   - Configurar el texto en una caja
-  - El texto actúa de acuerdo con la caja
+  - El texto actua de acuerdo con la caja
   - visible, hidden, scroll, auto (scroll necesario)
 
 ## Bordes
@@ -161,7 +161,7 @@
 
 - border-radius: NUM NUM NUM NUM
 
-  - Hacer el borde más circular
+  - Hacer el borde mas circular
 
 - border-width: NUM NUM NUM NUM
 
@@ -169,7 +169,7 @@
 
 - border-collapse: collapse
 
-  - Quitar separación de los bordes
+  - Quitar separacion de los bordes
 
 - border-bottom: NUM COLOR STYLE
   - Borde de abajo
@@ -183,7 +183,7 @@
 
 - background-image: url(“LINK”)
 
-  - Colocar imágenes de fondo
+  - Colocar imagenes de fondo
 
 - background-size: VAL o NUM NUM
 
@@ -197,11 +197,11 @@
 
 - background-position: VAL1 VAL2
 
-  - Posición de la imagen
+  - Posicion de la imagen
 
 - background-attachment: VAL
 
   - Mantener o fijar imagen del fondo
 
 - background: COLOR url(“LINK”) REPEAT POSITIONx POSITIONy / NUMALTO NUMANCH
-  - Colocar el fondo en una línea
+  - Colocar el fondo en una linea

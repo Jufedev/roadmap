@@ -1,6 +1,6 @@
 - display: flex
 
-  - Colocárselo al padre
+  - Colocarselo al padre
   - Unidimensional (Filas o columnas)
 
 - flex-flow: VAL VAL
@@ -24,8 +24,8 @@
 
 - flex-grow: NUM
 
-  - Espacio proporcional al número
-  - Permite que los ítems crezcan
+  - Espacio proporcional al numero
+  - Permite que los items crezcan
 
 - flex-basis: NUM
 
@@ -44,12 +44,12 @@
   - Colocar el orden de los elementos en el contenedor
 
 - gap: NUM
-  - Separación entre los elementos
+  - Separacion entre los elementos
 
 ### eje x
 
 - justify-content: VAL
-  - Posición de elementos
+  - Posicion de elementos
   - Horizontalmente
   - center (centrar), flex-start (inicio), flex-end (final), space-between (elementos al inicio, al centro y al final), space-around (espacio entre elementos (izq y derecha iguales)), space-evenly (mismo espacio entre elementos)
 
@@ -57,15 +57,15 @@
 
 - align-items: VAL
 
-  - Posición de elementos
+  - Posicion de elementos
   - Verticalmente
-  - center (centrar), flex-start (inicio), flex-end (final), baseline (línea base (centro) del texto), stretch (usa todo el alto)
+  - center (centrar), flex-start (inicio), flex-end (final), baseline (linea base (centro) del texto), stretch (usa todo el alto)
 
 - align-content: VAL
 
-  - Posición de elementos (Dentro de la fila)
+  - Posicion de elementos (Dentro de la fila)
   - center (centrar), flex-start (inicio), flex-end (final)
 
 - align-self: VAL
-  - Posición de elementos (Solo un elemento)
+  - Posicion de elementos (Solo un elemento)
   - center (centrar), flex-start (inicio), flex-end (final)

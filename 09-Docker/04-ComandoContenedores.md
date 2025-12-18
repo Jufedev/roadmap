@@ -40,7 +40,7 @@
 
 - docker run -it -d IMAGEN:VERSION
 
-  - Contenedor con una versión específica
+  - Contenedor con una version especifica
 
 - docker run -d -p 3001:3000 IMAGEN
 

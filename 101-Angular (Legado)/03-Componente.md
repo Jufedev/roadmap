@@ -1,8 +1,8 @@
-# ¿Qué es un componente?
+# ¿Que es un componente?
 
-- Una pieza de código que combina lógica con interfaz de usuario en una sola unidad reutilizable.
+- Una pieza de codigo que combina logica con interfaz de usuario en una sola unidad reutilizable.
 
-### Composición
+### Composicion
 
 - **Selector:** Como se va a instanciar el componente
 
@@ -30,7 +30,7 @@ export class NombreComponente{
 
 `<nombre-componente> <nombre-componente/>`
 
-## Comunicación entre componentes
+## Comunicacion entre componentes
 
 ### De padre a hijo
 
@@ -48,9 +48,9 @@ En el hijo declaramos la data que vamos a enviar
 
 `@output() prop = new EventEmitter<tipo>()`
 
-`this.prop.Emit(valor)` _Debe ir en una función_
+`this.prop.Emit(valor)` _Debe ir en una funcion_
 
-En el padre declaramos una función para recibir la data enviada por el hijo
+En el padre declaramos una funcion para recibir la data enviada por el hijo
 
 `<componente-hijo (pop)="funcion($event)">`
 

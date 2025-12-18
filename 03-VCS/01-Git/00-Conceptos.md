@@ -8,16 +8,16 @@
 
 - Ayuda a mejorar el trabajo en equipo.
 
-- Es descentralizado, cada desarrollador tiene una versión “original”.
+- Es descentralizado, cada desarrollador tiene una version “original”.
 
-- Proporciona un historial y un almacenamiento de código.
+- Proporciona un historial y un almacenamiento de codigo.
 
 - Al trabajar de forma lineal, se puede crear un proyecto a partir del proyecto principal, esto facilita el hacer modificaciones, para que posteriormente se unan estos cambios con el proyecto principal.
 
 - **LF:**
 
-  - Caracteres especiales para los saltos de líneas en mac o linux. - autocrlf input
+  - Caracteres especiales para los saltos de lineas en mac o linux. - autocrlf input
 
 - **CR/LF:**
 
-  - Caracteres especiales para los saltos de líneas en windows. - autocrlf true
+  - Caracteres especiales para los saltos de lineas en windows. - autocrlf true

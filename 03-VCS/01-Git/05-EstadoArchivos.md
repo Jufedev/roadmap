@@ -10,7 +10,7 @@
 
   - `git log`
 
-- Historial del repositorio con gráficos
+- Historial del repositorio con graficos
 
   - `git log –graph`
 

@@ -37,12 +37,12 @@ func main() {
     // Intentamos obtenerla
     port := os.Getenv(envVar)
 
-    // Si está vacía, usamos un valor por defecto
+    // Si esta vacia, usamos un valor por defecto
     if port == "" {
         port = "8080"
     }
 
-    fmt.Printf("Puerto de la aplicación: %s\n", port)
+    fmt.Printf("Puerto de la aplicacion: %s\n", port)
 }
 
 
@@ -61,7 +61,7 @@ func main() {
     // Intentamos obtener la variable de entorno y le asignamos valor por default
     port := getEnv("APP_PORT", "8080")
 
-    fmt.Printf("Puerto de la aplicación: %s\n", port)
+    fmt.Printf("Puerto de la aplicacion: %s\n", port)
 }
 
 

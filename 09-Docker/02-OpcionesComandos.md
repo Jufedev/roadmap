@@ -2,7 +2,7 @@
 
 - -i
 
-  - Sesión interactiva
+  - Sesion interactiva
 
 - -t
 
@@ -10,7 +10,7 @@
 
 - -it
 
-  - Sesión interactiva y emular una terminal
+  - Sesion interactiva y emular una terminal
 
 - -d
 
@@ -40,6 +40,6 @@
 - -f
   - Tiempo real
   - Usado en los logs
-  - También se puede usar con el run o compose
+  - Tambien se puede usar con el run o compose
 
 docker login [Logearse con docker hub]

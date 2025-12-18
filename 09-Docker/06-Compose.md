@@ -1,4 +1,4 @@
-- Escribir comandos fácilmente, especialmente cuando se va a trabajar con redes
+- Escribir comandos facilmente, especialmente cuando se va a trabajar con redes
 
 - Crear docker-compose.yml
 
@@ -24,11 +24,11 @@ services:
 		environment:
 			- MONGO_INITDB_ROOT_USERNAME=user
 			- MONGO_INITDB_ROOT_PASSWORD=password
-		volumes: # Define los volúmenes que este contenedor usa
+		volumes: # Define los volumenes que este contenedor usa
 			- mongo-data: /data/db
 			- mysql-data: /var/lib/mysql
 			- postgres-data: /var/lib/postgresql/data
 
-volumes: # Definir todos los volúmenes
+volumes: # Definir todos los volumenes
 	mongo-data:
 ```

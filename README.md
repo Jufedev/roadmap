@@ -1,6 +1,6 @@
 # Roadmap Backend (y algo de front)
 
-### ¿Qué encontraras en este repositorio?
+### ¿Que encontraras en este repositorio?
 
 1. Recursos generales de la web
 1. Recursos sobre el desarrollo de backend y de frontend

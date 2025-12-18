@@ -26,7 +26,7 @@
 
 - dir = ltr / rtl
 
-  - Dirección del texto] (left to right - right to left
+  - Direccion del texto] (left to right - right to left
 
 - hidden = true
 
@@ -44,7 +44,7 @@
 
 - name=”description” content=”DESCRIPCION”
 
-  - Descripción de la página
+  - Descripcion de la pagina
 
 - rel = “stylesheet” href = “ARCHIVO”
 
@@ -56,11 +56,11 @@
 
 - rel=”alternate” href=”URL” hreflang=”IDIOMA”
 
-  - Página en otro idioma
+  - Pagina en otro idioma
 
 - rel=”canonical” href=”URL”
 
-  - Página principal
+  - Pagina principal
 
 - og: OPEN GRAPH
 
@@ -94,7 +94,7 @@
 
 - rel="nooperer"
 
-  - No enviar datos de ningún tipo
+  - No enviar datos de ningun tipo
 
 ## Contenido
 
@@ -116,7 +116,7 @@
 
 - autoplay
 
-  - El usuario debe interactuar con la página
+  - El usuario debe interactuar con la pagina
 
 - muted
 
@@ -142,35 +142,35 @@
 
 - reversed
 
-  - La lista tendrá un orden invertido
+  - La lista tendra un orden invertido
 
 - start=”VAL”
 
-  - La lista empezará en ese valor
+  - La lista empezara en ese valor
 
 - value=”VAL”
 
-  - El elemento tendrá ese valor
+  - El elemento tendra ese valor
 
 ## Separadores
 
 - role=”ATRIB”
 
-  - Hacer que el div tenga un rol y sea semántico
+  - Hacer que el div tenga un rol y sea semantico
 
 - open
 
-  - Que esté abierto por defecto
+  - Que este abierto por defecto
 
 ## Formularios
 
 - action = “RUTA SERVIDOR”
 
-  - Conectar el servidor de envío
+  - Conectar el servidor de envio
 
 - method = “GET” o “POST”
 
-  - Mandar datos por un método (GET 255 caracteres o POST no muestra datos)
+  - Mandar datos por un metodo (GET 255 caracteres o POST no muestra datos)
 
 - name = “STRING”
 
@@ -186,7 +186,7 @@
 
 - value = “STRING”
 
-  - Valor que tendrá la etiqueta
+  - Valor que tendra la etiqueta
 
 - required = true
 
@@ -194,7 +194,7 @@
 
 - minLength = NUM
 
-  - Número de caracteres mínimos para enviar
+  - Numero de caracteres minimos para enviar
 
 - form = “ID”
 

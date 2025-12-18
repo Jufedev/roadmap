@@ -21,4 +21,4 @@
 - :nth-child(VAL)
 
   - Filas pares o impares (odd o even)
-  - Si se pone un número selecciona ese elemento
+  - Si se pone un numero selecciona ese elemento

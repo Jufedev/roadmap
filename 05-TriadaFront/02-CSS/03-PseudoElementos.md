@@ -4,7 +4,7 @@
 
 - ::first-line
 
-  - Primera línea
+  - Primera linea
 
 - ::first-letter
 

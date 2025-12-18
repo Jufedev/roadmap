@@ -1,8 +1,8 @@
-- Comprobar la versión de git
+- Comprobar la version de git
 
   - `git --version`
 
-- Configuración global y no por proyecto
+- Configuracion global y no por proyecto
 
   - `git config --global`
 
@@ -18,11 +18,11 @@
 
   - `git config --global core.editor “code --wait”`
 
-- Abrir archivo de configuración global
+- Abrir archivo de configuracion global
 
   - `git config --global -e`
 
-- Saltos de líneas en los archivos que se suben
+- Saltos de lineas en los archivos que se suben
 
   - `git config --global core.autocrlf true/input`
 

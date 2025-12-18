@@ -5,7 +5,7 @@ import "fmt"
 
 type Person struct {
     Name string  `json:"name"`  // Struct tags: Metadatos asociados al campo
-    Age int      `json:"age"`   // Dar instrucciones adicionales a librerías o paquete
+    Age int      `json:"age"`   // Dar instrucciones adicionales a librerias o paquete
     Email string `json:"email"` // Como se referencia en el archivo JSON en la serializacion o deserializacion
 }
 
@@ -24,7 +24,7 @@ func main() {
     // JSON de ejemplo (string)
     jsonData := `{"name":"Juan","age":30,"email":"juan@example.com"}`
 
-    // Variable donde se guardará el resultado
+    // Variable donde se guardara el resultado
     var p Person
 
     // Convertir JSON a Variable (Deserializar)

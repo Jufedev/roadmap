@@ -26,4 +26,4 @@ import (
 )
 ```
 
-- El archivo go.sum comprueba la integridad del código descargado
+- El archivo go.sum comprueba la integridad del codigo descargado

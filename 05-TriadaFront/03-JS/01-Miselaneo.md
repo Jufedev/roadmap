@@ -1,4 +1,4 @@
-### Aclaración
+### Aclaracion
 
 - Como la sintaxis y muchas cosas se comparten con C# solo colocare cosas de JS (y una que otra compartida)
 
@@ -36,14 +36,14 @@
 
   - Clonar de manera correcta un objeto
 
-- condición ? expr1 : expr2
+- condicion ? expr1 : expr2
 
   - Sintaxis simplificada del if
-  - Usar solo en códigos cortos
+  - Usar solo en codigos cortos
 
 - for(VAR2 in VAR){}
 
-  - Devuelve la posición del elemento en el array
+  - Devuelve la posicion del elemento en el array
 
 - for(VAR2 of VAR){}
 
@@ -52,12 +52,12 @@
 
 - ARRAY.forEach(VAR => FUNCION)
 
-  - Hace que la función se ejecute con cada valor del iterable
+  - Hace que la funcion se ejecute con cada valor del iterable
   - No podemos usar break, continue, etc
 
 - ARRAY.map(PARAM, INDEX => FUNCION)
 
-  - Hace que la función se ejecute con cada valor del iterable
+  - Hace que la funcion se ejecute con cada valor del iterable
   - El indice es opcional
   - No podemos usar break, continue, etc
 
@@ -86,7 +86,7 @@ const VARIABLE = new Promise((resolve, reject)=>{
   resolve(VAL)	// Cuando sale como se espera
 })
 
-VARIABLE.then((PARAM)=>{		// Mostrar sólo el resultado cuando todo sale bien
+VARIABLE.then((PARAM)=>{		// Mostrar solo el resultado cuando todo sale bien
 }).catch((e)=>{             // Mostrar el error sin que se ejecute como un error
 })
 

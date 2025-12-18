@@ -1,12 +1,12 @@
-- **Normalización:**
+- **Normalizacion:**
 
-  - Eliminar anomalías y hacer más eficiente la base de datos.
+  - Eliminar anomalias y hacer mas eficiente la base de datos.
 
   - Hay 5 formas normales:
 
     - **1NF:**
 
-      - Garantiza que cada atributo tenga un valor único atómico (colocar un ID para que no se repita un registro).
+      - Garantiza que cada atributo tenga un valor unico atomico (colocar un ID para que no se repita un registro).
 
     - **2NF:**
 
@@ -18,9 +18,9 @@
 
       - Debe estar en 2FN.
 
-      - No debe tener dependencia transitiva, si un cliente tiene el atributo ciudad y región, estos se deben separar a una tabla llamada lugar pues estos atributos no dependen del id del cliente.
+      - No debe tener dependencia transitiva, si un cliente tiene el atributo ciudad y region, estos se deben separar a una tabla llamada lugar pues estos atributos no dependen del id del cliente.
 
-  - Generalmente solo se normaliza hasta la 3FN, pues las últimas dos son para bases de datos muy grandes.
+  - Generalmente solo se normaliza hasta la 3FN, pues las ultimas dos son para bases de datos muy grandes.
 
     - **4NF:**
 
@@ -28,4 +28,4 @@
 
     - **5NF:**
 
-      - Quitar la dependencia de unión entre atributos.
+      - Quitar la dependencia de union entre atributos.

@@ -1,4 +1,4 @@
-- SQL maneja tablas para almacenar información.
+- SQL maneja tablas para almacenar informacion.
 
 - Una tabla se compone de filas, columnas y celdas.
 
@@ -14,7 +14,7 @@
 
   - La Primary Key o llave primaria es el ID que usa la tabla para identificar un registro.
 
-  - Debe ser un valor único.
+  - Debe ser un valor unico.
 
   - No puede ser un valor nulo.
 
@@ -22,11 +22,11 @@
 
 - **FK:**
 
-  - La Foreign Key o llave foránea es un campo que apunta a un registro, se usa el ID para identificarlo.
+  - La Foreign Key o llave foranea es un campo que apunta a un registro, se usa el ID para identificarlo.
 
   - Puede ser nulo.
 
-  - En una tabla pueden haber 2 o mas llaves foráneas.
+  - En una tabla pueden haber 2 o mas llaves foraneas.
 
 - **NN:**
 

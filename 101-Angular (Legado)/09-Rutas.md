@@ -27,4 +27,4 @@
 
   - `<a routerLink="/ruta">`
 
-  - `<a [routerLink]="['/ruta2', prop.id]">` _pasar parámetros a la ruta_
+  - `<a [routerLink]="['/ruta2', prop.id]">` _pasar parametros a la ruta_

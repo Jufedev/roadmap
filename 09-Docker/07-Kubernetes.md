@@ -1,6 +1,6 @@
-# ¿Qué es?
+# ¿Que es?
 
-- Es una plataforma que automatiza la implementación, escalado y administración de contenedores.
+- Es una plataforma que automatiza la implementacion, escalado y administracion de contenedores.
 
 # Conceptos
 
@@ -8,7 +8,7 @@
 
 - **IaaS:** Infraestructura como servicio.
 
-- **ETCD:** Almacén de datos de clave valor para información del cluster.
+- **ETCD:** Almacen de datos de clave valor para informacion del cluster.
 
 - **Pod:** Contiene uno o mas contenedores que comparten almacenamiento y red.
 
