@@ -1,9 +1,19 @@
 # ¿Que es?
 
-- asdasdasdasdasads
+- Es una herramienta de HashiCorp open source para administrar soluciones en cualquier cloud.
+
+- Se usa para definir, aprovisionar y gestionar infraestructura de nube y on-premises mediante archivos de configuración.
 
 # Conceptos
 
-- **Vasdasdasnes:** Es una carpeta en el sistema de ficheros del Docker Host y son capaces de sobrevivir al ciclo de vida del contenedor, los datos no se afectan si se apaga o se elimina el contenedor.
+- **Write:** Se describe la infraestructura que se desea pero no como se aprovisiona.
 
-- **Docdasdasose:** Herramienta para definir y ejecutar aplicaciones de varios contenedores. Usa YAML para definir los servicios.
+- **Plan:** Terraform analiza la configuracion escrita y el estado actual de la infraestructura y crea un plan de ejecucion que describe como alcanzara el estado final a partir del estado actual.
+
+- **Apply:** Una vez se aprueba el plan, Terraform realiza las operaciones propuestas en el orden correcto y respeta cualquier dependencia de recursos.
+
+# Algunos datos sobre el lenguaje
+
+- Nacio en el 2014.
+
+- Usa el lenguaje HCl (HashiCorp Configuration Language) para su sintaxis.

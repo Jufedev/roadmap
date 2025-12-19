@@ -1,9 +1,19 @@
 # ¿Que es?
 
-- asdasdasdasdasads
+- Es la practica de gestionar y aprovisionar recursos de infraestructura mediante archivos de configuración y herramientas automatizadas.
 
 # Conceptos
 
-- **Vasdasdasnes:** Es una carpeta en el sistema de ficheros del Docker Host y son capaces de sobrevivir al ciclo de vida del contenedor, los datos no se afectan si se apaga o se elimina el contenedor.
+- **Declarativo:** Describir el estado final deseado.
 
-- **Docdasdasose:** Herramienta para definir y ejecutar aplicaciones de varios contenedores. Usa YAML para definir los servicios.
+- **Imperativo:** Especificar los pasos concretos para llegar a el final.
+
+- **Idempotencia:** Al aplicar la misma configuración varias veces bajo las mismas condiciones, el resultado siempre es el mismo por lo que las operaciones de IaC suelen ser idempotentes (Siempre producen el mismo resultado).
+
+# Usos habituales
+
+- Replicar entornos de forma consistente.
+
+- Auditar cambios.
+
+- Versionar la infraestructura como si fuera software.
