@@ -14,7 +14,7 @@
 
 ```
 variable "instance_count" {
-  description = "Número de instancias a crear"
+  description = "Numero de instancias a crear"
   type        = number
   default     = 2
 }

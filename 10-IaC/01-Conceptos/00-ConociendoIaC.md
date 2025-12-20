@@ -1,6 +1,6 @@
 # ¿Que es?
 
-- Es la practica de gestionar y aprovisionar recursos de infraestructura mediante archivos de configuración y herramientas automatizadas.
+- Es la practica de gestionar y aprovisionar recursos de infraestructura mediante archivos de configuracion y herramientas automatizadas.
 
 # Conceptos
 
@@ -8,7 +8,7 @@
 
 - **Imperativo:** Especificar los pasos concretos para llegar a el final.
 
-- **Idempotencia:** Al aplicar la misma configuración varias veces bajo las mismas condiciones, el resultado siempre es el mismo por lo que las operaciones de IaC suelen ser idempotentes (Siempre producen el mismo resultado).
+- **Idempotencia:** Al aplicar la misma configuracion varias veces bajo las mismas condiciones, el resultado siempre es el mismo por lo que las operaciones de IaC suelen ser idempotentes (Siempre producen el mismo resultado).
 
 # Usos habituales
 

@@ -50,13 +50,13 @@
 
 - **Jerarquia**: Los nested stacks pueden contener otros nested stacks, formando una jerarquia. Por ejemplo:
 
-    - Stack A es el **root stack** (pila raíz).
+    - Stack A es el **root stack** (pila raiz).
     
-    - Stack B está anidado dentro de A → A es el padre y también el root de B.
+    - Stack B esta anidado dentro de A → A es el padre y tambien el root de B.
     
-    - Stack C está anidado dentro de B → B es el padre directo de C, pero **A sigue siendo el root stack de C**.
+    - Stack C esta anidado dentro de B → B es el padre directo de C, pero **A sigue siendo el root stack de C**.
     
-    - Stack D está anidado dentro de C → C es el padre directo de D, pero **A sigue siendo el root stack de D**.
+    - Stack D esta anidado dentro de C → C es el padre directo de D, pero **A sigue siendo el root stack de D**.
 
 
 ## Como Funcionan

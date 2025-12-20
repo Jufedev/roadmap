@@ -2,7 +2,7 @@
 
 - Es una herramienta de HashiCorp open source para administrar soluciones en cualquier cloud.
 
-- Se usa para definir, aprovisionar y gestionar infraestructura de nube y on-premises mediante archivos de configuración.
+- Se usa para definir, aprovisionar y gestionar infraestructura de nube y on-premises mediante archivos de configuracion.
 
 # Conceptos
 

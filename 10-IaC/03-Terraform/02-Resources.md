@@ -8,7 +8,7 @@
 
 ```
 resource "aws_instance" "mi_instancia" {
-  ami           = "ami-0c55b159cbfafe1f0" # ID de imagen de la máquina (AMI) en us-east-1
+  ami           = "ami-0c55b159cbfafe1f0" # ID de imagen de la maquina (AMI) en us-east-1
   instance_type = "t2.micro" # Tipo de instancia
   tags = {
     Name        = "MiInstanciaWeb" # Etiqueta (tag) opcional para identificar la instancia
@@ -17,7 +17,7 @@ resource "aws_instance" "mi_instancia" {
 }
 
 resource "aws_s3_bucket" "logs_bucket" {
-  bucket = "mi-bucket-de-logs" # Nombre del bucket (único en S3)
+  bucket = "mi-bucket-de-logs" # Nombre del bucket (unico en S3)
   acl    = "private" # Control de acceso
   tags = {
     Environment = "Dev"
