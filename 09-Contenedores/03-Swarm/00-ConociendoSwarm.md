@@ -1,6 +1,8 @@
-# ¿Que es?
+# ¿Que es Docker?
 
-- Es un proyecto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstraccion y automatizacion de virtualizacion de aplicaciones en multiples sistemas operativos.
+- Es una tecnologia que permite crear, implementar y gestionar aplicaciones dentro de contenedores ligeros y modulares.
+
+- Automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstraccion y automatizacion de virtualizacion de aplicaciones en multiples sistemas operativos.
 
 # Conceptos
 

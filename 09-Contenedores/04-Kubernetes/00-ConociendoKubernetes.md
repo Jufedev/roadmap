@@ -15,3 +15,7 @@
 - **Nodo:** Es la maquina que ejecuta los pods.
 
 - **Kubelet:** Componente que comprueba el funcionamiento de todos los contenedores (de un nodo) y se ejecuta en cada nodo del cluster.
+
+# Algunos datos de la plataforma
+
+- Se le dice k8.

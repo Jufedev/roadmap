@@ -1,4 +1,6 @@
-- Escribir comandos facilmente, especialmente cuando se va a trabajar con redes
+# ¿Que es Docker compose?
+
+- Escribir comandos facilmente, especialmente cuando se va a trabajar con redes.
 
 - Crear docker-compose.yml
 
