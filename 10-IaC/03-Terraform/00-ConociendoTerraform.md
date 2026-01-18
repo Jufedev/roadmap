@@ -4,6 +4,8 @@
 
 - Se usa para definir, aprovisionar y gestionar infraestructura de nube y on-premises mediante archivos de configuracion.
 
+- Es declarativo, decimos que vamos a desplegar no el como.
+
 # Conceptos
 
 - **Write:** Se describe la infraestructura que se desea pero no como se aprovisiona.
@@ -12,8 +14,63 @@
 
 - **Apply:** Una vez se aprueba el plan, Terraform realiza las operaciones propuestas en el orden correcto y respeta cualquier dependencia de recursos.
 
+- **Inmutabilidad:** Tratar los recursos como no mutables. Solo editarlos desde terraform y no directamente.
+
 # Algunos datos sobre el lenguaje
 
 - Nacio en el 2014.
 
 - Usa el lenguaje HCl (HashiCorp Configuration Language) para su sintaxis.
+
+- Agnostico al provider.
+
+- Puede crear 10 recursos en paralelo por defecto, esto es custom.
+
+# Estructura de un bloque HCL
+
+```
+Tipo de   Tipo de     Nombre del
+bloque    Recurso      Recurso
+   |         |            |
+   v         v            v
+resource "local_file" "mensaje" {
+    content = "Este es un archivo"     <- Argumento 1
+    filename = "archivo.txt"           <- Argumento 2
+}
+```
+
+# Comandos basicos
+
+- Al tener un proyecto nuevo o agregar un proveedor nuevo, ejecutar `terraform init` para que descargue el proveedor que definimos.
+
+- `terraform plan`:
+    - Ver las acciones que terraform va a ejecutar.
+
+- `terraform plan --out NOMBRE.plan`:
+    - Guardar el plan en un archivo.
+    - Util si queremos hacer deploy despues y trabajamos en un repo que alguien mas puede editar.
+
+- `terraform apply`: 
+    - Ejecutar las acciones que vimos en el plan.
+    - Crea un plan nuevo, no usa planes que ya habiamos ejecutado.
+
+- `terraform apply NOMBRE.plan`: 
+    - Despliega recursos de un plan previamente creado.
+    - No se realiza un plan y no pregunta si queremos hacer deploy.
+
+- `terraform destroy`: 
+    - Eliminar todos los recursos creados.
+
+- `terraform show`: 
+    - Ver los recursos que terraform creo.
+    - Si se hace un destroy show no muestra nada.
+
+- `terraform fmt`:
+    - Formatea todos los archivos Terraform del directorio.
+
+- `terraform fmt ARCHIVO.tf`:
+    - Formatea solo un archivo Terraform.
+
+- `terraform validate`:
+    - Verificar que no hayan errores en archivos terraform.
+    - `terraform plan` tambien arroja los errores, pero el plan puede tardar mucho tiempo en hacerse, si sale un error perdemos ese tiempo.

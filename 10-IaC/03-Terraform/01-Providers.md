@@ -17,7 +17,7 @@ terraform {
       version = "~> 5.0" # Version minima de AWS provider
     }
   }
-  required_version = ">= 1.2"  # Version minima de Terraform
+  required_version = ">= 1.2"  # Version minima de Terraform | >= una version igual o mayor | ~> cualquier version en minor version #.#.X | >= , < mayor que pero menor que
 }
 
 provider "aws" {
