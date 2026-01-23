@@ -23,5 +23,8 @@ terraform {
 provider "aws" {
   region                  = "us-east-1" # Region por defecto
   shared_credentials_file = "~/.aws/credentials" # Archivo de credenciales AWS
+  default_tags {      # Colocar tags por defecto a todo los recursos de AWS
+    tags = var.tags
+  }
 }
 ```
