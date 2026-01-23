@@ -58,6 +58,8 @@ resource "local_file" "mensaje" {
 - `terraform apply`: 
     - Ejecutar las acciones que vimos en el plan.
     - Crea un plan nuevo, no usa planes que ya habiamos ejecutado.
+    - Se puede ejecutar `terraform apply --auto-approve=true` para que se apruebe sin el "yes". 
+    - Se puede ejecutar `terraform apply --replace=RECURSO.NOMBRE` para que se recree un recurso (destruye y crea). 
 
 - `terraform apply NOMBRE.plan`: 
     - Despliega recursos de un plan previamente creado.
@@ -108,3 +110,21 @@ resource "local_file" "mensaje" {
     - Borra recursos del estado pero no recursos desplegados.
     - Dejar de dar seguimiento de recursos desplegados.
     - Se deja de tener el recurso como IaC (desligar recursos de terraform).
+
+- `terraform state pull > terraform.tfstate`:
+    - Descargar un estado remoto para manejarlo de forma local.
+
+- `terraform init -migrate-state`:
+    - Migrar el estado de remoto a local (se hace despues de descargar el estado remoto).
+
+- `terraform taint RECURSO.NOMBRE`:
+    - Marcar el recurso como "tainted" o "manchado".
+    - Esto sirve para que el recurso siempre se recree en el apply.
+    - Se ejecuta `terraform untaint RECURSO.NOMBRE` para desmarcar el recurso.
+    - Los recursos se pueden marcar como "tainted" al crear un recurso pero falla uno de los pasos (ejemplo la ejecucion de un codigo que no afecta en la creacion de la instancia).
+
+- `terraform import RECURSO.NOMBRE ID`:
+    - Importar un recurso al estado de terraform.
+
+- `terraform console`:
+    - Abrir una consola para debuggear valores de las funciones y cosas aritmeticas.

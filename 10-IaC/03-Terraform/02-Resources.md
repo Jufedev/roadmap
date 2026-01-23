@@ -17,11 +17,56 @@ resource "aws_instance" "mi_instancia" {
     Environment = "Dev"
   }
 
+  # Ejecucion de codigo (usuario root)
+  user_Data = <<EOF
+    #!/bin/bash
+    echo "Este es un mensaje" > ~/mensaje.txt
+  EOF
+
+  # Tambien podemos ejecutar el user data asi
+  user_Data = file("userdata.sh") 
+
   lifecycle {
     create_before_destroy = true    # Primero lo crea y luego lo destruye.
     prevent_destroy = true    # No eliminar bajo ningun concepto el recurso.
     ignore_changes = [ami, subnet_id]   # Ignora cambios del recurso.
     replace_triggered_by = [ aws_subnet.private_subnet ]  # Si se cambia un recurso (asi sea un tag) este recurso sera redesplegado. 
+  }
+
+  # Ejecucion de codigo
+  provisioner "local-exec" { # Ejecucion local del comando 
+    command = "echo instancia creada con IP ${aws_instance.mi_instancia.public_ip} >> datos_instancia.txt"
+  }
+
+  provisioner "local-exec" {
+    when = destroy #Por defecto es create
+    command = "echo instancia eliminada con IP ${self.public_ip} >> datos_instancia.txt" #Se instancia el recurso como "self"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "echo 'Hola' > ~/saludo.txt"
+    ]
+
+    # Necesitamos conectarnos al host o nos arrojara error en la ejecucion
+    connection = [
+      type = "ssh"
+      host = self.public_ip
+      user = "ec2-user"
+      private_key = file("mykey")
+    ]
+  }
+
+  # Generar varias "reglas" para los SGs sin tener que repetir el bloque "ingress" por cada puerto (No podemos tener diferentes valores, por ejemplo la descripcion seria la misma en cada regla)
+  dynamic "ingress" {
+    for_each = var.ingress_port_lista
+
+    content {
+      from_port = ingress.value
+      to_port = ingress.value
+      protocol = "tcp"
+      cidr_blocks = [var.sg_ingress_cidres]
+    }
   }
 }
 

@@ -34,3 +34,18 @@ resource "aws_subnet" "public" {
   tags = merge(local.common_tags, { Name = "subnet-${each.key}" })
 }
 ```
+
+
+```
+# locals.tf
+locals {
+  sufix = "${var.tags.project}-${var.tags.env}-${var.tags.region}"
+}
+
+resource "aws_subnet" "public" {
+  tags = {
+    "Name" = "subnet-publica-${local.sufix}"
+  }
+}
+```
+

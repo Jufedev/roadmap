@@ -14,6 +14,20 @@
 
 - Existe el Terraform Registry donde la comunidad publica modulos
 
+## Clasificacion
+
+- Modulo principal:
+  - main.tf
+  - variables.tf
+  - output.tf
+  - providers.tf
+  - data.tf
+
+- Modulo Hijo:
+  - main.tf
+  - variables.tf
+  - output.tf     # Exporta primero el valor para usarse en el padre
+
 ## Ejemplo
 
 ```
