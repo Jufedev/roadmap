@@ -128,3 +128,21 @@ resource "local_file" "mensaje" {
 
 - `terraform console`:
     - Abrir una consola para debuggear valores de las funciones y cosas aritmeticas.
+
+
+# Terraform Cloud
+
+- Almacenar y mantener el tfstate de forma segura.
+
+- Punto de partida para el despliegue de infra estructura.
+
+- Es un SaaS que permite realizar todas las operaciones de terraform (plan, apply, destroy, etc), crear equipos, proyectos y conectar repositorios.
+
+
+# Herramientas que ayudan en el flujo
+
+- [INFRACOST](https://github.com/infracost/infracost)
+
+- [TFSEC](https://github.com/aquasecurity/tfsec)
+
+- [TFLINT](https://github.com/terraform-linters/tflint)
