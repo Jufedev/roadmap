@@ -30,6 +30,20 @@
     --coral:#d97706;--coral-bg:#ffedd5;--coral-text:#7c2d12;
   }
 }
+/* Forzar dark si el navegador no reporta preferencia (incógnito, algunos móviles) */
+@media not (prefers-color-scheme:light){
+  :root{
+    --bg:#0f1117;--surface:#1a1d27;--surface2:#22263a;--border:#2e3250;
+    --text:#e2e8f0;--text2:#94a3b8;--text3:#4a5568;
+    --green:#52b788;--green-bg:#1b3a2d;--green-text:#b7e4c7;
+    --blue:#74c0fc;--blue-bg:#1c2e4a;--blue-text:#a5d8ff;
+    --amber:#ffc078;--amber-bg:#3d2600;--amber-text:#ffd8a8;
+    --red:#ff6b6b;--red-bg:#3b0d0d;--red-text:#ffc9c9;
+    --purple:#c3b1e1;--purple-bg:#2d1f4a;--purple-text:#d8bfd8;
+    --teal:#2dd4bf;--teal-bg:#0d2f2a;--teal-text:#99f6e4;
+    --coral:#f4a261;--coral-bg:#3a1a0a;--coral-text:#ffd8b8;
+  }
+}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;min-height:100vh;padding-bottom:72px}
 a{color:var(--blue);text-decoration:none}
