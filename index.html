@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Cloud Roadmap 2026–2028</title>
+<style>
+:root{
+  --bg:#0f1117;--surface:#1a1d27;--surface2:#22263a;--border:#2e3250;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#4a5568;
+  --green:#52b788;--green-bg:#1b3a2d;--green-text:#b7e4c7;
+  --blue:#74c0fc;--blue-bg:#1c2e4a;--blue-text:#a5d8ff;
+  --amber:#ffc078;--amber-bg:#3d2600;--amber-text:#ffd8a8;
+  --red:#ff6b6b;--red-bg:#3b0d0d;--red-text:#ffc9c9;
+  --purple:#c3b1e1;--purple-bg:#2d1f4a;--purple-text:#d8bfd8;
+  --teal:#2dd4bf;--teal-bg:#0d2f2a;--teal-text:#99f6e4;
+  --coral:#f4a261;--coral-bg:#3a1a0a;--coral-text:#ffd8b8;
+  --radius:10px;--radius-sm:6px;
+}
+@media(prefers-color-scheme:light){
+  :root{
+    --bg:#f0f4f8;--surface:#ffffff;--surface2:#e8edf5;--border:#d1d9e6;
+    --text:#1a202c;--text2:#4a5568;--text3:#a0aec0;
+    --green:#2d6a4f;--green-bg:#d8f3dc;--green-text:#1b4332;
+    --blue:#1971c2;--blue-bg:#dbe4ff;--blue-text:#1864ab;
+    --amber:#b45309;--amber-bg:#fef3c7;--amber-text:#78350f;
+    --red:#c92a2a;--red-bg:#fee2e2;--red-text:#7f1d1d;
+    --purple:#6d28d9;--purple-bg:#ede9fe;--purple-text:#4c1d95;
+    --teal:#0d9488;--teal-bg:#ccfbf1;--teal-text:#134e4a;
+    --coral:#d97706;--coral-bg:#ffedd5;--coral-text:#7c2d12;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;min-height:100vh;padding-bottom:72px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+input,select,textarea{font-family:inherit;font-size:13px;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 10px;width:100%;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--green)}
+button{font-family:inherit;cursor:pointer}
+.app-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.app-title{font-size:15px;font-weight:600;color:var(--text)}
+.app-title span{color:var(--green)}
+.header-btn{background:none;border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text2);font-size:12px}
+.header-btn:hover{background:var(--surface2)}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);border-top:1px solid var(--border);display:flex}
+.nav-btn{flex:1;background:none;border:none;padding:10px 4px 8px;color:var(--text3);font-size:10px;display:flex;flex-direction:column;align-items:center;gap:3px;transition:color .15s}
+.nav-btn.active{color:var(--green)}
+.nav-btn svg{width:20px;height:20px}
+#content{padding:12px 14px;max-width:680px;margin:0 auto}
+.section-title{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin:18px 0 8px}
+.section-title:first-child{margin-top:4px}
+
+/* DASHBOARD */
+.dash-hero{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px;text-align:center}
+.dash-pct{font-size:48px;font-weight:700;color:var(--green);line-height:1}
+.dash-sub{font-size:12px;color:var(--text2);margin:4px 0 14px}
+.progress-bar{background:var(--surface2);border-radius:4px;height:8px;overflow:hidden}
+.progress-fill{background:var(--green);height:100%;border-radius:4px;transition:width .4s ease}
+.progress-bar.sm{height:4px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:4px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 8px;text-align:center}
+.stat-val{font-size:18px;font-weight:600;color:var(--text)}
+.stat-label{font-size:10px;color:var(--text2);margin-top:2px}
+.current-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:4px}
+.cc-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.cc-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.cc-name{font-size:14px;font-weight:600}
+.cc-period{font-size:11px;color:var(--text2)}
+.cc-prog{display:flex;align-items:center;gap:8px;margin-top:8px}
+.cc-prog span{font-size:11px;color:var(--text2);min-width:28px;text-align:right}
+.cert-pill{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:7px 12px;margin-bottom:8px;font-size:12px;width:100%}
+.cert-pill-name{flex:1;font-weight:500}
+.badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.badge.voucher{background:var(--amber-bg);color:var(--amber-text)}
+.badge.gratis{background:var(--green-bg);color:var(--green-text)}
+.badge.pago{background:var(--surface2);color:var(--text2)}
+.badge.pendiente{background:var(--surface2);color:var(--text2)}
+.badge.programado{background:var(--blue-bg);color:var(--blue-text)}
+.badge.aprobado{background:var(--green-bg);color:var(--green-text)}
+.badge.reprobado{background:var(--red-bg);color:var(--red-text)}
+.badge.libro{background:var(--purple-bg);color:var(--purple-text)}
+.badge.curso{background:var(--blue-bg);color:var(--blue-text)}
+.badge.lab{background:var(--teal-bg);color:var(--teal-text)}
+.badge.practica{background:var(--amber-bg);color:var(--amber-text)}
+
+/* PHASES */
+.phase-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+.phase-hdr{display:flex;align-items:center;gap:10px;padding:13px 14px;cursor:pointer;user-select:none}
+.phase-hdr:hover{background:var(--surface2)}
+.ph-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.ph-info{flex:1;min-width:0}
+.ph-name{font-size:13px;font-weight:600}
+.ph-meta{font-size:11px;color:var(--text2)}
+.ph-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.ph-pct{font-size:12px;color:var(--text2);min-width:28px;text-align:right}
+.chevron{font-size:10px;color:var(--text3)}
+.ph-bar{height:3px;background:var(--surface2)}
+.ph-fill{height:100%;transition:width .3s}
+.weeks-list{padding:8px}
+.week-item{border-radius:var(--radius-sm);margin-bottom:6px;padding:10px;background:var(--surface2);border:1px solid transparent;transition:border-color .15s}
+.week-item.done{opacity:.65}
+.week-item.done .week-title{text-decoration:line-through}
+.week-row{display:flex;align-items:flex-start;gap:8px}
+.week-row input[type=checkbox]{width:16px;height:16px;margin-top:2px;flex-shrink:0;accent-color:var(--green);cursor:pointer}
+.week-title{font-size:13px;font-weight:500;flex:1}
+.wtype{font-size:10px;font-weight:600;padding:2px 6px;border-radius:10px;white-space:nowrap}
+.wtype.base{background:var(--surface);color:var(--text2)}
+.wtype.lab{background:var(--teal-bg);color:var(--teal-text)}
+.wtype.exam{background:var(--amber-bg);color:var(--amber-text)}
+.week-topics{margin:6px 0 6px 24px}
+.topic{font-size:11px;color:var(--text2);padding:1px 0;padding-left:10px;position:relative}
+.topic::before{content:'–';position:absolute;left:0;color:var(--text3)}
+.notes-btn{background:none;border:none;color:var(--text3);font-size:11px;margin-left:24px;padding:2px 0;cursor:pointer;display:flex;align-items:center;gap:4px}
+.notes-btn:hover{color:var(--blue)}
+.notes-btn.has-note{color:var(--amber)}
+
+/* RESOURCES */
+.filters{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.filters select{flex:1;min-width:100px}
+.res-count{font-size:11px;color:var(--text2);margin-bottom:8px}
+.res-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-bottom:8px}
+.res-card.done{opacity:.55}
+.res-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px}
+.res-check{display:flex;align-items:flex-start;gap:8px;flex:1;cursor:pointer}
+.res-check input[type=checkbox]{width:16px;height:16px;margin-top:1px;flex-shrink:0;accent-color:var(--green)}
+.res-title{font-size:13px;font-weight:500}
+.res-badges{display:flex;gap:4px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.res-phase{font-size:11px;margin-bottom:4px}
+.res-desc{font-size:12px;color:var(--text2);margin-bottom:6px;line-height:1.45}
+.res-link{font-size:12px;color:var(--blue)}
+
+/* EXAMS */
+.exam-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:10px}
+.exam-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;gap:8px}
+.exam-name{font-size:14px;font-weight:600}
+.exam-meta{font-size:11px;color:var(--text2);margin-top:2px}
+.exam-badges{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.exam-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.field label{font-size:11px;color:var(--text2);display:block;margin-bottom:3px}
+.exam-note{font-size:11px;color:var(--text3);margin-top:8px;font-style:italic}
+
+/* MODALS */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;align-items:center;justify-content:center;padding:20px}
+.overlay.show{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;width:100%;max-width:420px;max-height:80vh;overflow-y:auto}
+.modal h3{font-size:15px;font-weight:600;margin-bottom:12px}
+.modal textarea{min-height:140px;resize:vertical;margin-bottom:10px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end}
+.btn{padding:8px 16px;border-radius:var(--radius-sm);font-size:13px;font-weight:500;border:1px solid var(--border);background:var(--surface2);color:var(--text);cursor:pointer}
+.btn:hover{background:var(--border)}
+.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}
+.btn.primary:hover{opacity:.9}
+.btn.danger{background:var(--red-bg);color:var(--red-text);border-color:var(--red-bg)}
+.settings-list{display:flex;flex-direction:column;gap:8px}
+.settings-list .btn{text-align:left;width:100%;justify-content:flex-start}
+.settings-divider{height:1px;background:var(--border);margin:4px 0}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-title">☁ Ruta <span>Cloud</span> 2026–2028</div>
+  <button class="header-btn" onclick="showSettings()">⚙ Datos</button>
+</header>
+
+<main id="content"></main>
+
+<nav class="bottom-nav">
+  <button class="nav-btn active" data-tab="dash" onclick="showTab('dash')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    Panel
+  </button>
+  <button class="nav-btn" data-tab="fases" onclick="showTab('fases')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+    Fases
+  </button>
+  <button class="nav-btn" data-tab="recursos" onclick="showTab('recursos')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+    Recursos
+  </button>
+  <button class="nav-btn" data-tab="examenes" onclick="showTab('examenes')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    Exámenes
+  </button>
+</nav>
+
+<div class="overlay" id="notes-overlay">
+  <div class="modal">
+    <h3 id="notes-modal-title">Notas</h3>
+    <textarea id="notes-area" placeholder="Tus apuntes, dudas, recursos extra para esta semana..."></textarea>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeNotes()">Cancelar</button>
+      <button class="btn primary" onclick="saveNotes()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="settings-overlay">
+  <div class="modal">
+    <h3>Gestión de datos</h3>
+    <div class="settings-list">
+      <button class="btn" onclick="exportData()">⬇ Exportar progreso (JSON)</button>
+      <button class="btn" onclick="document.getElementById('import-file').click()">⬆ Importar progreso (JSON)</button>
+      <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(this)">
+      <div class="settings-divider"></div>
+      <small style="color:var(--text2);font-size:11px">Exporta el JSON y guárdalo para sincronizar entre dispositivos. Al importarlo en otro browser, tu progreso queda disponible.</small>
+      <div class="settings-divider"></div>
+      <button class="btn danger" onclick="confirmReset()">✕ Reiniciar todo el progreso</button>
+      <button class="btn" onclick="closeSettings()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const PHASES=[
+{id:0,name:'Cimientos',color:'#52b788',period:'May–Jun 2026',wRange:'1–4',certs:[],voucher:false,note:null,
+ weeks:[
+  {n:1,t:'Linux Profundo I',type:'base',tp:['Diagnóstico: htop, netstat, ss, lsof, strace, iotop','Permisos: chmod/chown/ACLs/umask — casos reales','Servicios systemd: enable, journald, targets, unit files, cgroups']},
+  {n:2,t:'Linux Profundo II',type:'lab',tp:['Bash scripting: loops, funciones, trap, getopts, arrays asociativos','Gestión de paquetes: apt, yum, dpkg, repositorios custom','Lab: script monitor CPU/RAM → alerta webhook Telegram']},
+  {n:3,t:'Networking I — Protocolos',type:'base',tp:['Modelo OSI: cada capa con ejemplos de herramientas reales','TCP/IP, CIDR, subnetting (practica con papel y lápiz)','DNS, TLS/SSL, SSH, HTTP/2, SFTP — cómo funciona cada uno a bajo nivel']},
+  {n:4,t:'Networking II — Routing & Firewalls',type:'lab',tp:['BGP: AS números, atributos (MED, LP, AS-path), tipos de peering','iptables / nftables: chains, reglas, NAT, conntrack, persistencia','nginx: reverse proxy, load balancing upstream, SSL termination','Lab: 2-3 VMs Linux con routing manual entre subredes distintas']}
+ ],
+ resources:[
+  {id:'r0-0',t:'The Linux Command Line — William Shotts',type:'libro',paid:false,url:'https://linuxcommand.org/tlcl.php',desc:'Libro completo disponible gratis en linuxcommand.org. Cubre shell, scripting, procesos y más. Referencia permanente.'},
+  {id:'r0-1',t:'Linux for Hackers — NetworkChuck (YouTube)',type:'curso',paid:false,url:'https://www.youtube.com/playlist?list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL',desc:'Playlist práctica de ~20 videos. Enfocada en sysadmin y networking desde perspectiva de hacking ético.'},
+  {id:'r0-2',t:'OverTheWire: Bandit',type:'lab',paid:false,url:'https://overthewire.org/wargames/bandit/',desc:'Wargame de Linux con 34 niveles progresivos. Cubre SSH, permisos, grep, pipes, scripting básico. Mejor lab práctico gratis.'},
+  {id:'r0-3',t:'Professor Messer Network+ (N10-009)',type:'curso',paid:false,url:'https://www.professormesser.com/network-plus/n10-009-network-plus/',desc:'Curso completo de networking gratis en video. Cubre OSI, TCP/IP, protocolos, routing, VLANs, firewalls. Muy bien explicado.'},
+  {id:'r0-4',t:'Subnetting Practice',type:'lab',paid:false,url:'https://subnettingpractice.com/',desc:'Práctica interactiva de subnetting y CIDR. Excelente para afianzar el cálculo de subredes sin herramientas.'},
+  {id:'r0-5',t:'NetworkChuck — BGP explicado',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=_Z29ZzKeZHc',desc:'Video de ~30 min que explica BGP de forma práctica con ejemplos. Buen punto de entrada antes de los labs de AWS.'},
+  {id:'r0-6',t:'Cisco Packet Tracer (gratis con cuenta)',type:'lab',paid:false,url:'https://skillsforall.com/resources/lab-downloads',desc:'Simulador de redes de Cisco. Crea topologías, configura routing, OSPF, BGP, VLAN. Requiere cuenta gratuita en Cisco Skills.'}
+ ]
+},
+{id:1,name:'Python + Terraform',color:'#74c0fc',period:'Jun–Ago 2026',wRange:'5–13',certs:['Terraform Associate'],voucher:false,note:null,
+ weeks:[
+  {n:5,t:'Python Intermedio I',type:'base',tp:['OOP: clases, herencia, dunder methods, dataclasses, @property','Context managers (with), decorators, generators, itertools','Testing: pytest fixtures, mocks, parametrize, coverage report']},
+  {n:6,t:'Python Infra — Scripting real',type:'lab',tp:['subprocess, os, pathlib para scripts de infraestructura','JSON/YAML: json, PyYAML, pydantic para validación de config','boto3 básico: listar/filtrar recursos AWS, costos por tag','Lab: monitor CPU → alerta Telegram vía webhook (con requests)']},
+  {n:7,t:'Terraform: Fundamentos IaC',type:'base',tp:['IaC conceptos: idempotencia, state, drift, declarativo vs imperativo','HCL: resource, provider, variable, output, data source — sintaxis completa','Ciclo completo: init → plan → apply → destroy con ejemplos reales']},
+  {n:8,t:'Terraform: State y Variables',type:'base',tp:['Input variables: tipos (string/list/map/object), validaciones, sensitive','Remote state en S3 + locking con DynamoDB — configuración completa','Comandos state: list, show, mv, rm, push, terraform import']},
+  {n:9,t:'Terraform: Módulos',type:'base',tp:['Estructura de módulo: main.tf, variables.tf, outputs.tf, versions.tf','Módulos del Registry: terraform-aws-modules/vpc, ec2, security-group','for_each, count, dynamic blocks, depends_on explícito entre recursos']},
+  {n:10,t:'Terraform: Expresiones Avanzadas',type:'base',tp:['lifecycle: create_before_destroy, ignore_changes, replace_triggered_by','Built-in functions: toset, merge, lookup, format, templatefile, flatten','Workspaces para dev/prod, conditional expressions, locals, moved block']},
+  {n:11,t:'Proyecto AWS con Terraform',type:'lab',tp:['VPC modular + subnets públicas/privadas + EC2 + SG con módulos del registry','Remote state en S3+DynamoDB, separación dev/prod con workspaces o dirs','Buenas prácticas: estructura de carpetas, naming, tagging policy enforced por variable']},
+  {n:12,t:'Terraform Cloud + GitHub Actions',type:'base',tp:['HCP Terraform: workspaces, VCS integration, remote plan/apply','Variables sensibles en TFC, Sentinel policies como concepto (examen)','GitHub Actions: tf fmt + validate en PRs, plan comentado, apply en merge a main']},
+  {n:13,t:'Examen Terraform Associate',type:'exam',tp:['Repasar study guide oficial — todos los objetivos del examen','2 simulacros cronometrados: Examtopics + práctica de Udemy','Identificar gaps con KodeKloud labs interactivos en browser','RENDIR EXAMEN Terraform Associate (HashiCorp Certified)']}
+ ],
+ resources:[
+  {id:'r1-0',t:'aprendepython.es',type:'curso',paid:false,url:'https://aprendepython.es/',desc:'Recurso en español de alta calidad. Cubre Python desde cero hasta intermedio. Tiene ejercicios al final de cada sección. Recomendado como base.'},
+  {id:'r1-1',t:'CS50P — Python (Harvard, gratis)',type:'curso',paid:false,url:'https://cs50.harvard.edu/python/2022/',desc:'Curso de Python de Harvard con certificado gratuito. 10 semanas, muy bien estructurado. Los problem sets son excelente práctica.'},
+  {id:'r1-2',t:'Exercism — Python track',type:'lab',paid:false,url:'https://exercism.org/tracks/python',desc:'110 ejercicios con feedback de mentores. Cubre de básico a avanzado. Ideal para afianzar OOP, funciones, comprehensions.'},
+  {id:'r1-3',t:'HashiCorp Terraform Tutorials (AWS)',type:'curso',paid:false,url:'https://developer.hashicorp.com/terraform/tutorials/aws-get-started',desc:'Tutoriales oficiales gratuitos de HashiCorp. Los de AWS Get Started son el mejor punto de entrada. Incluye labs en el browser.'},
+  {id:'r1-4',t:'Anton Putra — Terraform YouTube',type:'curso',paid:false,url:'https://www.youtube.com/playlist?list=PLiMWaCMwGJXmJdmfJjG3aK1IkU7oWvxIj',desc:'Playlist completa y actualizada. Cubre desde fundamentos hasta módulos, workspace y CI/CD. Recomendado en el PDF original.'},
+  {id:'r1-5',t:'Terraform Up & Running — Brikman (3ª ed)',type:'libro',paid:true,url:'https://www.oreilly.com/library/view/terraform-up-and/9781098116736/',desc:'El mejor libro sobre Terraform. 3ª edición actualizada para TF 1.x. ~$50 USD en O\'Reilly o en Amazon. Vale totalmente la inversión.'},
+  {id:'r1-6',t:'KodeKloud — Terraform basics (labs en browser)',type:'lab',paid:false,url:'https://learn.kodekloud.com/courses/terraform-basics-training-course',desc:'Laboratorios interactivos en el browser, sin instalar nada. Cubre los mismos temas del examen Terraform Associate.'},
+  {id:'r1-7',t:'Examtopics — Terraform Associate practice',type:'practica',paid:false,url:'https://www.examtopics.com/exams/hashicorp/terraform-associate-003/',desc:'Banco de preguntas gratuito para el examen. Algunas respuestas tienen discusiones en los comentarios que son muy valiosas.'}
+ ]
+},
+{id:2,name:'AWS CLF-C02',color:'#ffc078',period:'Ago–Sep 2026',wRange:'14–16',certs:['AWS CLF-C02'],voucher:true,note:'Tienes voucher para este examen. No necesitas pagar el costo del examen (~$100 USD).',
+ weeks:[
+  {n:14,t:'Cloud + Servicios Core',type:'base',tp:['Conceptos cloud: IaaS/PaaS/SaaS, modelos de responsabilidad compartida','EC2, S3, RDS, Lambda, IAM — nivel conceptual con casos de uso','VPC básico: subredes, SGs, Internet Gateway, NAT a alto nivel']},
+  {n:15,t:'Facturación + Seguridad + Soporte',type:'base',tp:['Modelos de precios: On-Demand, Reserved, Spot, Savings Plans','Herramientas: Cost Explorer, Budgets, TCO Calculator, Pricing Calculator','Seguridad: IAM básico, Shield, WAF, Inspector, Trusted Advisor']},
+  {n:16,t:'Repaso + Examen CLF',type:'exam',tp:['Simulacros con kananinirav.com (enlace en PDF) — al menos 200 preguntas','Practice exam de Andrew Brown en YouTube (full mock)','RENDIR EXAMEN AWS CLF-C02 (usar voucher disponible)']}
+ ],
+ resources:[
+  {id:'r2-0',t:'AWS CLF Essentials — Skill Builder (oficial)',type:'curso',paid:false,url:'https://explore.skillbuilder.aws/learn/course/134/cloud-practitioner-essentials',desc:'Curso oficial de AWS, totalmente gratuito. 6 horas de contenido estructurado. La mejor fuente oficial para el examen.'},
+  {id:'r2-1',t:'Andrew Brown ExamPro — CLF-C02 (YouTube 14h)',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=NKEFWyqJ5XA',desc:'Curso completo de 14 horas gratuito en YouTube. Muy popular y actualizado para CLF-C02. Cubre todos los dominios del examen.'},
+  {id:'r2-2',t:'kananinirav.com — CLF practice exams',type:'practica',paid:false,url:'https://kananinirav.com/practice-exam/exams.html',desc:'Banco de preguntas gratuito referenciado en el PDF. Acceso libre sin registro. Ideal para práctica rápida.'},
+  {id:'r2-3',t:'Tutorials Dojo — CLF practice exams',type:'practica',paid:true,url:'https://tutorialsdojo.com/courses/aws-certified-cloud-practitioner-practice-exams/',desc:'Los mejores simulacros de examen, ~$15 USD. Incluye explicaciones detalladas por pregunta. Útil para identificar gaps.'},
+  {id:'r2-4',t:'AWS Free Tier (cuenta real)',type:'lab',paid:false,url:'https://aws.amazon.com/free/',desc:'Crea servicios reales en AWS Free Tier: EC2 t2.micro, S3, Lambda, RDS. Complementa perfectamente la teoría con práctica real.'}
+ ]
+},
+{id:3,name:'NSE 1 + NSE 2 + NSE 3',color:'#f4a261',period:'Sep–Oct 2026',wRange:'17–19',certs:['NSE 1','NSE 2','NSE 3'],voucher:false,note:'Los cursos NSE 1-3 se actualizan en julio 2026. Iniciarlos después de agosto garantiza contenido al día.',
+ weeks:[
+  {n:17,t:'NSE 1 — The Threat Landscape',type:'base',tp:['Conceptos de ciberseguridad: tipos de ataques, amenazas, vulnerabilidades','El panorama de amenazas actual: malware, ransomware, phishing, APTs','Fundamentos de redes desde perspectiva de seguridad Fortinet']},
+  {n:18,t:'NSE 2 — The Evolution of Cybersecurity',type:'base',tp:['Evolución de la seguridad: de firewalls tradicionales a Security Fabric','Productos Fortinet: FortiGate, FortiAnalyzer, FortiManager, FortiSIEM','Integración de soluciones: cómo se conecta el ecosistema Fortinet']},
+  {n:19,t:'NSE 3 + Terraform FortiOS',type:'lab',tp:['NSE 3: Fortinet Security Fabric — ventas y soluciones técnicas básicas','FortiOS: navegación del CLI, configuración básica, políticas y objetos','Terraform FortiOS provider: gestionar FortiGate con IaC — firewall as code','Lab: desplegar una política básica de FortiGate con Terraform provider']}
+ ],
+ resources:[
+  {id:'r3-0',t:'NSE 1 — Fortinet NSE Institute (gratis)',type:'curso',paid:false,url:'https://training.fortinet.com/',desc:'Curso oficial gratuito de Fortinet. Registro en el NSE Institute. Aproximadamente 2 horas de contenido auto-paced. Incluye certificado.'},
+  {id:'r3-1',t:'NSE 2 — Fortinet NSE Institute (gratis)',type:'curso',paid:false,url:'https://training.fortinet.com/',desc:'Curso oficial gratuito. Cubre el portafolio de productos Fortinet y la arquitectura Security Fabric. Aproximadamente 3 horas.'},
+  {id:'r3-2',t:'NSE 3 — Fortinet NSE Institute (gratis)',type:'curso',paid:false,url:'https://training.fortinet.com/',desc:'Curso oficial gratuito orientado a soluciones de negocio. Cubre casos de uso de la Security Fabric de forma integrada.'},
+  {id:'r3-3',t:'Terraform FortiOS Provider — Documentación',type:'curso',paid:false,url:'https://registry.terraform.io/providers/fortinetdev/fortios/latest/docs',desc:'Documentación completa del provider oficial de Fortinet para Terraform. Cubre configuración de políticas, objetos, VPN y más con IaC.'},
+  {id:'r3-4',t:'FortiGate Admin Guide — Fortinet Docs',type:'libro',paid:false,url:'https://docs.fortinet.com/product/fortigate/',desc:'Documentación oficial completa de FortiGate. Referencia indispensable para entender FortiOS. Completamente gratuita en docs.fortinet.com.'},
+  {id:'r3-5',t:'Fortinet FortiGate Free VM (trial)',type:'lab',paid:false,url:'https://www.fortinet.com/support-and-training/support/product-downloads',desc:'VM de FortiGate con licencia trial gratuita de 15-30 días. Permite practicar CLI, políticas y configuración real antes de hacer los labs.'}
+ ]
+},
+{id:4,name:'AWS SAA-C03',color:'#ffc078',period:'Oct–Dic 2026',wRange:'20–28',certs:['AWS SAA-C03'],voucher:false,note:'Con 1.5 años de exp. en ECS/IAM/redes, esta fase es principalmente formalizar y llenar gaps, no aprender desde cero.',
+ weeks:[
+  {n:20,t:'Compute + Storage Profundo',type:'base',tp:['EC2: tipos, placement groups, Spot/Reserved/Savings Plans — comparativa y trade-offs','S3: storage classes, lifecycle rules, replication, presigned URLs, Object Lock','EBS: gp3 vs io2, snapshots, Fast Snapshot Restore; EFS vs FSx (cuándo cada uno)']},
+  {n:21,t:'Bases de Datos — Decisiones de diseño',type:'base',tp:['RDS: Multi-AZ vs Read Replicas, backup, encryption, RDS Proxy para connection pooling','Aurora: serverless v2, global database, clone para dev/test — cuándo usar sobre RDS','DynamoDB: particiones, GSI/LSI, streams, DAX, TTL, PITR — patrones de acceso']},
+  {n:22,t:'VPC Profundo I',type:'base',tp:['Diseño multi-AZ: public/private/DB subnets, CIDR planning correcto desde el inicio','NAT Gateway vs NAT Instance: diferencias de costo, performance y mantenimiento','Route Tables, SG vs NACLs: stateful vs stateless con diagramas de flujo de tráfico']},
+  {n:23,t:'VPC Profundo II + Lab',type:'lab',tp:['VPC Endpoints: Gateway (S3/DDB) vs Interface (PrivateLink) — diferencias clave','VPC Peering: limitaciones de transitivity, tablas de rutas en ambos lados','Lab: arquitectura 3-tier completa (ALB + EC2 + RDS) con flujo de tráfico documentado']},
+  {n:24,t:'Alta Disponibilidad + Auto Scaling',type:'base',tp:['ELB: ALB vs NLB vs GWLB — casos de uso con números reales de latencia','ASG: políticas predictive/target tracking/step scaling, warm pools, instance refresh','Route 53: routing policies (latency, geolocation, failover, weighted), health checks']},
+  {n:25,t:'Seguridad + IAM Avanzado',type:'base',tp:['IAM: permission boundaries, session policies, conditions por IP/time/MFA','KMS: CMKs, envelope encryption, rotación automática, key policies vs IAM','Secrets Manager vs SSM Parameter Store: comparativa de casos de uso y costo']},
+  {n:26,t:'Serverless + Mensajería',type:'base',tp:['Lambda: concurrency (reserved/provisioned), layers, SnapStart, ARM64, function URLs','SQS vs SNS vs EventBridge: cuándo usar cada patrón y cómo combinarlos','ECS/Fargate avanzado (tu experiencia): service connect, service discovery, task networking']},
+  {n:27,t:'Well-Architected + DR + Migración',type:'base',tp:['5 pilares Well-Architected con ejemplos de decisiones de diseño reales','DR patterns: Backup, Pilot Light, Warm Standby, Active-Active — RTO/RPO de cada uno','Migración: 7Rs, DMS, MGN (Application Migration Service), Snowball family']},
+  {n:28,t:'Examen SAA-C03',type:'exam',tp:['500+ preguntas Tutorials Dojo — analizar todas las explicaciones, incluso las correctas','2 simulacros cronometrados (65 preguntas / 130 min) con condiciones reales','Reforzar áreas débiles identificadas en simulacros con labs de AWS','RENDIR EXAMEN AWS SAA-C03']}
+ ],
+ resources:[
+  {id:'r4-0',t:'Adrian Cantrill — SAA-C03 (MEJOR del mercado)',type:'curso',paid:true,url:'https://learn.cantrill.io/p/aws-certified-solutions-architect-associate',desc:'~$40 USD pago único. El curso más completo y profundo de SAA. Incluye diagramas animados, labs reales y una arquitectura de demo end-to-end. Vale la inversión.'},
+  {id:'r4-1',t:'Andrew Brown ExamPro — SAA-C03 (YouTube, gratis)',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=c3Cn4xYfxJY',desc:'Curso completo y gratuito en YouTube (~27 horas). Buena alternativa gratuita a Adrian Cantrill. Actualizado para SAA-C03.'},
+  {id:'r4-2',t:'Tutorials Dojo — SAA practice exams (ESENCIAL)',type:'practica',paid:true,url:'https://tutorialsdojo.com/courses/aws-certified-solutions-architect-associate-practice-exams/',desc:'~$15 USD. Los mejores simulacros del mercado para SAA. Las explicaciones son tan valiosas como las preguntas. Absolutamente necesario.'},
+  {id:'r4-3',t:'AWS Well-Architected Labs (gratis)',type:'lab',paid:false,url:'https://www.wellarchitectedlabs.com/',desc:'Labs oficiales de AWS organizados por pilar del Well-Architected Framework. Labs reales en cuenta AWS. Excelente práctica arquitectónica.'},
+  {id:'r4-4',t:'AWS Skill Builder — SAA learning path',type:'curso',paid:false,url:'https://explore.skillbuilder.aws/learn/lp/1044/solutions-architect-learning-plan',desc:'Path oficial de AWS para SAA. Parte del contenido es gratuito. Complementa bien a Adrian Cantrill o Andrew Brown.'},
+  {id:'r4-5',t:'AWS SAA Study Guide — Sybex (Wiley)',type:'libro',paid:true,url:'https://www.wiley.com/en-us/AWS+Certified+Solutions+Architect+Study+Guide%3A+Associate+SAA-C03+Exam-p-9781119982623',desc:'~$45 USD. Buen libro de referencia para repasar conceptos en formato de lectura. Útil como complemento, no como recurso principal.'}
+ ]
+},
+{id:5,name:'GitHub Actions + CI/CD',color:'#c3b1e1',period:'Dic 2026–Feb 2027',wRange:'29–34',certs:[],voucher:false,note:'Priorizado antes que K8s para automatizar despliegues en free tiers (ECS, Lambda, Fargate) de inmediato.',
+ weeks:[
+  {n:29,t:'GitHub Actions — Fundamentos',type:'base',tp:['Anatomía: events, jobs, steps, runners, contexts, expressions','Matrix builds: múltiples OS/versiones en paralelo, include/exclude','Secrets y environments: github.token, environment protection rules, OIDC']},
+  {n:30,t:'OIDC + Seguridad en Pipelines',type:'base',tp:['OIDC para autenticación sin secrets: AWS + Azure + GCP desde Actions','Least privilege en roles IAM para CI/CD: scoped por repo/branch/env','Security scanning: Trivy container, Semgrep SAST, Dependabot auto-merge']},
+  {n:31,t:'Pipelines para AWS (ECS + Lambda)',type:'lab',tp:['Pipeline ECS/Fargate: test → build → push ECR → update task definition → redeploy','Pipeline Lambda: zip → upload S3 → update function → alias promotion','Caché de dependencias: actions/cache para npm/pip/go para velocidad']},
+  {n:32,t:'Estrategias de Deploy',type:'base',tp:['Blue/Green en ECS: ALB target groups con switch automático post health check','Canary deploy: ALB weighted routing entre versiones old/new','Reusable workflows: workflow_call, inputs/outputs, secrets: inherit']},
+  {n:33,t:'Terraform en CI/CD',type:'lab',tp:['terraform plan comentado automáticamente en PRs (conftest/OPA)','terraform apply automático en merge a main (con aprobación manual opcional)','Checkov para security scanning de código IaC en el pipeline']},
+  {n:34,t:'Proyecto — Pipeline completo',type:'lab',tp:['Pipeline end-to-end: lint → test → SAST → build → push → IaC plan → deploy ECS','Branch protection: required checks, CODEOWNERS, signed commits','Lab: automatizar despliegue de app real en Free Tier con 0 costo']}
+ ],
+ resources:[
+  {id:'r5-0',t:'GitHub Skills — Interactive Labs (gratis)',type:'lab',paid:false,url:'https://skills.github.com/',desc:'Laboratorios interactivos oficiales de GitHub. Cada skill es un ejercicio real en un repo. Cubre Actions desde Hello World hasta CD avanzado.'},
+  {id:'r5-1',t:'GitHub Actions Docs (oficiales, gratis)',type:'curso',paid:false,url:'https://docs.github.com/en/actions',desc:'La mejor referencia para Actions. Incluye ejemplos, guías de seguridad, OIDC setup para AWS/Azure, y matrices de runners disponibles.'},
+  {id:'r5-2',t:'TechWorld with Nana — CI/CD Crash Course',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=R8_veQiYBjI',desc:'Video de ~1.5h que explica CI/CD con ejemplos reales. Buen punto de entrada conceptual antes de entrar a los labs prácticos.'},
+  {id:'r5-3',t:'nektos/act — Ejecutar Actions localmente',type:'lab',paid:false,url:'https://github.com/nektos/act',desc:'Herramienta que ejecuta GitHub Actions localmente con Docker. Ideal para iterar rápido sin hacer push. Altamente recomendado para desarrollo de pipelines.'},
+  {id:'r5-4',t:'AWS OIDC + GitHub Actions (guía oficial)',type:'curso',paid:false,url:'https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services',desc:'Guía oficial para configurar OIDC entre GitHub Actions y AWS. Elimina la necesidad de guardar Access Keys en secrets. Práctica de seguridad esencial.'},
+  {id:'r5-5',t:'Fireship — GitHub Actions in 100 Seconds',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=eB0nUzAI7M8',desc:'Video corto pero denso de Fireship. Excelente para entender el concepto rápidamente antes de los labs. Canal muy recomendado en general.'}
+ ]
+},
+{id:6,name:'Azure — AZ-900 + AZ-104 + AZ-700',color:'#74c0fc',period:'Feb–May 2027',wRange:'35–48',certs:['AZ-900','AZ-104','AZ-700'],voucher:false,note:'Prioritizado para trabajo con el tenant Azure actual. La landing zone + POCs pueden arrancar durante AZ-104.',
+ weeks:[
+  {n:35,t:'AZ-900 — Cloud Concepts',type:'base',tp:['Cloud concepts: IaaS/PaaS/SaaS, shared responsibility, consumption model','Azure core: regiones, availability zones, resource groups, ARM, Bicep intro','Gobernanza: Azure Policy, RBAC, Management Groups, Cost Management, Tags']},
+  {n:36,t:'AZ-900 — Servicios + Seguridad',type:'base',tp:['Azure VMs, App Service, Functions, AKS, Container Instances a alto nivel','Storage: Blob, Files, Table, Queue — cuándo usar cada uno','Seguridad: Entra ID (AAD), Defender for Cloud, Sentinel, Monitor conceptos']},
+  {n:37,t:'AZ-900 — Examen',type:'exam',tp:['Microsoft Learn practice assessment oficial (gratis, sin registro)','Simulacro Andrew Brown o MeasureUp AZ-900','RENDIR EXAMEN AZ-900 (rápido dado experiencia con AWS)']},
+  {n:38,t:'AZ-104 — Entra ID + Gobernanza',type:'base',tp:['Entra ID: usuarios, grupos, RBAC roles (built-in + custom), PIM, MFA','Subscriptions + Management Groups + Azure Policy + Blueprints','Azure Monitor: Log Analytics workspace, DCR, diagnostic settings, Workbooks']},
+  {n:39,t:'AZ-104 — Compute + Storage',type:'base',tp:['VMs: availability sets vs zones, scale sets, extensions, custom images','Azure Storage: account types, replication (LRS/GRS/ZRS), lifecycle, SFTP, Backup','App Service: plans, deployment slots, autoscale, custom domains, certificates']},
+  {n:40,t:'AZ-104 — Networking I',type:'base',tp:['VNet: subredes, NSG (diferencia con SG de AWS), ASG, effective routes','VNet Peering: global peering, tablas de rutas, solapamiento de CIDR','Azure DNS: zonas públicas y privadas, registros, alias records']},
+  {n:41,t:'AZ-104 — Networking II + Lab Landing Zone',type:'lab',tp:['Azure Bastion para acceso seguro a VMs sin IP pública','NAT Gateway y Azure VPN Gateway Site-to-Site básico','Lab: estructurar landing zone del tenant: Management Groups + Policy + Network Hub-spoke']},
+  {n:42,t:'AZ-104 — AKS + Backup + Examen',type:'exam',tp:['AKS: despliegue básico, integración Entra ID (workload identity), AGIC','Azure Backup: Recovery Services vault, políticas, restore de VM/blob','Simulacros AZ-104 (MeasureUp o WhizLabs) + identificar gaps','RENDIR EXAMEN AZ-104']},
+  {n:43,t:'AZ-700 — Hybrid Connectivity',type:'base',tp:['ExpressRoute: circuitos, private/Microsoft/transit peering, Global Reach, FastPath','VPN Gateway: SKUs, BGP config, active-active, zone-redundant, IKEv2/IKEv1','Conexión S2S con BGP: configuración completa desde portal y con Terraform']},
+  {n:44,t:'AZ-700 — Azure Firewall + IDPS',type:'base',tp:['Azure Firewall Standard vs Premium: DNAT/SNAT/Network/App rules, FQDN tags','Firewall Policy: rule collection groups, IDPS, TLS inspection en Premium','Azure DDoS Protection: Basic vs Network — cuándo justifica el costo']},
+  {n:45,t:'AZ-700 — Private Endpoints + DNS',type:'base',tp:['Private Endpoint: NIC en subred, Private DNS Zone, integración con DNS on-prem','Private Link Service: exponer servicios propios con NLB interno','Azure DNS Private Resolver: inbound/outbound endpoints, ruleset forwarding']},
+  {n:46,t:'AZ-700 — Virtual WAN + Arc',type:'base',tp:['Virtual WAN: hubs, routing intent, secured hub con Azure Firewall integrado','vWAN vs Hub-Spoke tradicional: cuándo usar cada arquitectura','Azure Arc: gestionar K8s externos (incluyendo EKS) y servidores desde Azure']},
+  {n:47,t:'AZ-700 — Network Monitoring',type:'base',tp:['Network Watcher: Connection Monitor, IP flow verify, NSG diagnostics','Traffic Analytics: VNet flow logs + Log Analytics para visibilidad de tráfico','Azure Monitor Network Insights: topología, alertas por latencia/pérdida de paquetes']},
+  {n:48,t:'AZ-700 — Examen',type:'exam',tp:['Simulacros MeasureUp AZ-700 (práctica más cercana al examen real)','Lab final: hub-spoke completo con VPN Gateway + Azure Firewall + Private Endpoints','RENDIR EXAMEN AZ-700 (Network Engineer Associate)']}
+ ],
+ resources:[
+  {id:'r6-0',t:'Microsoft Learn — AZ-900 (oficial, gratis)',type:'curso',paid:false,url:'https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/',desc:'Path oficial de Microsoft para AZ-900. Módulos interactivos con sandboxes de Azure incluidos. Totalmente gratuito. La fuente más confiable.'},
+  {id:'r6-1',t:'Andrew Brown — AZ-900 YouTube (3h, gratis)',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=pY0LnKiDwRA',desc:'Curso completo de AZ-900 de ~3 horas en YouTube. Bueno para repaso rápido si ya tienes base de AWS. No profundiza tanto como MS Learn.'},
+  {id:'r6-2',t:'John Savill — AZ-104 Study Cram (YouTube, gratis)',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=VOod_VNgdJk',desc:'El mejor recurso gratuito para AZ-104. John Savill (MVP de Microsoft) explica con diagramas excelentes. Cubre todos los dominios del examen en ~8 horas.'},
+  {id:'r6-3',t:'Microsoft Learn — AZ-104 (oficial, gratis)',type:'curso',paid:false,url:'https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/',desc:'Path oficial de Microsoft para AZ-104. Incluye sandboxes de Azure. Complementa bien el canal de John Savill.'},
+  {id:'r6-4',t:'John Savill — AZ-700 Study Cram (YouTube, gratis)',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=nVZFktvZmoE',desc:'El MEJOR recurso gratuito para AZ-700. Cubre toda la conectividad híbrida, Private Link, Firewall y Virtual WAN con diagramas muy claros.'},
+  {id:'r6-5',t:'Microsoft Learn — AZ-700 (oficial, gratis)',type:'curso',paid:false,url:'https://learn.microsoft.com/en-us/credentials/certifications/azure-network-engineer-associate/',desc:'Path oficial para AZ-700. Los módulos de ExpressRoute y VPN Gateway tienen sandboxes interactivos muy útiles para práctica sin costo.'},
+  {id:'r6-6',t:'Azure Free Account ($200 crédito)',type:'lab',paid:false,url:'https://azure.microsoft.com/en-us/free/',desc:'Cuenta gratuita con $200 USD de crédito por 30 días + servicios always-free. Para POCs y labs del tenant sin consumir presupuesto del trabajo.'},
+  {id:'r6-7',t:'MeasureUp — Azure practice exams (AZ-104, AZ-700)',type:'practica',paid:true,url:'https://www.measureup.com/',desc:'Los simulacros oficiales de Microsoft para certificaciones Azure. ~$99 USD por examen pero son los más cercanos al examen real. WhizLabs (~$20) como alternativa económica.'}
+ ]
+},
+{id:7,name:'Docker Intermedio',color:'#2dd4bf',period:'May–Jun 2027',wRange:'49–51',certs:[],voucher:false,note:null,
+ weeks:[
+  {n:49,t:'Imágenes Optimizadas',type:'base',tp:['Dockerfiles multi-stage: separar build/test/runtime para reducir tamaño final','Build cache strategies: orden de instrucciones, ARG vs ENV, .dockerignore preciso','Escaneo de vulnerabilidades: Trivy local + Docker Scout + integración en CI']},
+  {n:50,t:'Redes + Compose Avanzado',type:'lab',tp:['Redes Docker: bridge custom, host, overlay (Swarm), macvlan — cuándo cada una','Compose: depends_on + healthcheck, profiles por ambiente, secrets, configs','Lab: app 3-tier (nginx + app + db) con Compose, healthchecks y volumes persistentes']},
+  {n:51,t:'Seguridad Docker',type:'lab',tp:['Non-root users: USER instruction, gosu para entrypoints, namespaces','Read-only filesystem, dropped capabilities, seccomp profiles, AppArmor','Content Trust y cosign para firma de imágenes — cadena de confianza en CI']}
+ ],
+ resources:[
+  {id:'r7-0',t:'TechWorld with Nana — Docker Full Course (YouTube)',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=3c-iBn73dDE',desc:'El mejor curso gratuito de Docker en YouTube (~4 horas). Cubre desde conceptos hasta Docker Compose y redes. Muy bien explicado.'},
+  {id:'r7-1',t:'Play with Docker (labs en browser)',type:'lab',paid:false,url:'https://labs.play-with-docker.com/',desc:'Ambiente Docker gratuito en el browser con sesiones de 4 horas. Ideal para practicar sin instalar nada. Incluye tutoriales guiados.'},
+  {id:'r7-2',t:'Docker Official Docs',type:'curso',paid:false,url:'https://docs.docker.com/',desc:'La documentación oficial de Docker. La sección de Best Practices para Dockerfiles y la guía de redes son especialmente valiosas.'},
+  {id:'r7-3',t:'Docker Deep Dive — Nigel Poulton',type:'libro',paid:true,url:'https://nigelpoulton.com/books/',desc:'~$15 USD. Libro muy conciso (~200 páginas) que cubre Docker completamente. Nigel Poulton también tiene contenido gratuito en YouTube.'},
+  {id:'r7-4',t:'KodeKloud — Docker for Beginners',type:'lab',paid:false,url:'https://learn.kodekloud.com/courses/docker-for-the-absolute-beginner',desc:'Labs interactivos en el browser para Docker. Cubre comandos, Dockerfile, Compose y redes con ejercicios prácticos guiados.'}
+ ]
+},
+{id:8,name:'Kubernetes + KCNA',color:'#c3b1e1',period:'Jun–Sep 2027',wRange:'52–62',certs:['KCNA'],voucher:false,note:'Universidad terminada. Mayor disponibilidad de tiempo para esta fase más densa.',
+ weeks:[
+  {n:52,t:'Arquitectura K8s',type:'base',tp:['Control plane: kube-apiserver, etcd, scheduler, controller-manager — qué hace cada uno','Worker nodes: kubelet, kube-proxy, container runtime (containerd) — flujo de pod','kubectl esencial: get, describe, logs, exec, apply, delete; kubeconfig multi-contexto']},
+  {n:53,t:'Objetos Base — Pods y Deployments',type:'base',tp:['Pods: lifecycle, multi-container (sidecar/init), liveness/readiness/startup probes','Deployments: rolling update (maxSurge/maxUnavailable), rollback, revision history','ReplicaSets, Namespaces, Labels, Selectors, Annotations — patrones de organización']},
+  {n:54,t:'ConfigMaps, Secrets y Resources',type:'base',tp:['ConfigMaps: como env vars (envFrom), como volumen mounted, hot reload','Secrets: tipos, base64, secretKeyRef, externalSecret con AWS Secrets Manager (concepto)','Resource requests y limits: CPU/Memory throttling, OOMKilled, QoS classes']},
+  {n:55,t:'Networking K8s',type:'base',tp:['Services: ClusterIP, NodePort, LoadBalancer, ExternalName, headless service','Ingress Controllers: nginx-ingress reglas path/host, TLS con cert-manager, rate limiting','CoreDNS: formato FQDN interno, resolución cross-namespace, custom CoreDNS config']},
+  {n:56,t:'Storage K8s',type:'base',tp:['PersistentVolumes y PVCs: access modes (RWO/RWX/ROX), reclaim policies','StorageClasses: parámetros por provisioner, WaitForFirstConsumer, expandable','StatefulSets: identidad de pod, headless service, volumeClaimTemplates, orderedReady']},
+  {n:57,t:'EKS en AWS',type:'lab',tp:['Managed Node Groups vs Fargate profiles: trade-offs costo/ops/visibilidad','Karpenter: NodePool, EC2NodeClass, consolidation mode, spot + on-demand mix','IRSA (IAM Roles for Service Accounts): workload identity pattern con OIDC provider']},
+  {n:58,t:'Helm + HPA + KEDA',type:'base',tp:['Helm: charts, values override, hooks, rollback, OCI registry, helmfile para multi-chart','HPA: métricas CPU/memoria, custom metrics con Prometheus Adapter','KEDA: event-driven autoscaling con SQS/Kafka/Redis como triggers']},
+  {n:59,t:'Observabilidad K8s',type:'lab',tp:['kube-prometheus-stack: Prometheus + Grafana + Alertmanager en cluster','Loki + Promtail: logging stack completo como alternativa a ELK','OpenTelemetry: traces, métricas, logs unificados — concepto e implementación básica']},
+  {n:60,t:'Ecosistema Cloud-Native (KCNA)',type:'base',tp:['KCNA domains: containers, runtime, distribución (Harbor, OCI spec)','GitOps conceptos: ArgoCD App of Apps, sync waves, resource hooks','Service Mesh: Istio/Envoy, mTLS, traffic management, observabilidad L7']},
+  {n:61,t:'Repaso + Simulacros KCNA',type:'exam',tp:['Dominios KCNA: K8s Fundamentals, Cloud-Native Architecture, Scheduling, Security','Ecosistema: Prometheus, Helm, Envoy, OPA/Gatekeeper, Falco — a nivel conceptual','Lab final: app con Deployment + PVC + Ingress + HPA + NetworkPolicy']},
+  {n:62,t:'Examen KCNA',type:'exam',tp:['Simulacro final cronometrado con análisis de errores','RENDIR EXAMEN KCNA (Kubernetes and Cloud Native Associate)','Planificación del sprint CKA: configurar ambiente de práctica diaria']}
+ ],
+ resources:[
+  {id:'r8-0',t:'TechWorld with Nana — K8s Full Course (YouTube)',type:'curso',paid:false,url:'https://www.youtube.com/watch?v=X48VuDVv0do',desc:'El curso gratuito más completo de K8s (~5 horas). Cubre arquitectura, objetos, Helm y StatefulSets. Perfecto punto de entrada práctico.'},
+  {id:'r8-1',t:'Kubernetes Official Docs',type:'curso',paid:false,url:'https://kubernetes.io/docs/home/',desc:'La documentación oficial es excelente. Los Concepts y Tasks son la referencia principal. El glosario y los ejemplos son indispensables.'},
+  {id:'r8-2',t:'Killercoda — K8s Scenarios (gratis)',type:'lab',paid:false,url:'https://killercoda.com/kubernetes',desc:'Laboratorios interactivos de K8s en el browser. Covers CKA/CKAD scenarios. Ambiente con kubectl real, sin instalar nada. Usar diariamente.'},
+  {id:'r8-3',t:'Kubernetes in Action — Marko Lukša (2ª ed)',type:'libro',paid:true,url:'https://www.manning.com/books/kubernetes-in-action-second-edition',desc:'El mejor libro de K8s (~$50 USD). Explica cada concepto con profundidad real. La 2ª edición cubre K8s 1.25+. Referencia permanente de la especialidad.'},
+  {id:'r8-4',t:'KodeKloud — KCNA course',type:'curso',paid:true,url:'https://learn.kodekloud.com/user/courses/kubernetes-and-cloud-native-associate-kcna',desc:'~$15/mes. Curso específico para KCNA con labs. KodeKloud es el proveedor de referencia para certificaciones Kubernetes.'},
+  {id:'r8-5',t:'Kubernetes The Hard Way (gratis)',type:'lab',paid:false,url:'https://github.com/kelseyhightower/kubernetes-the-hard-way',desc:'Tutorial de Kelsey Hightower para instalar K8s desde cero sin kubeadm. Entender esto a fondo es lo que diferencia a un admin de un usuario.'}
+ ]
+},
+{id:9,name:'CKA',color:'#c3b1e1',period:'Sep 2027–Jan 2028',wRange:'63–76',certs:['CKA'],voucher:false,note:'El examen más exigente de la ruta en formato. 2 horas, terminal, 15-20 tareas cronometradas. La práctica diaria es no negociable.',
+ weeks:[
+  {n:63,t:'Instalación de Cluster',type:'lab',tp:['kubeadm: init, join, reset, bootstrap tokens, kubeadm config file','Control plane HA: stacked etcd vs external etcd — diferencias y cuándo','CRI: containerd config (/etc/containerd/config.toml), crictl para debug']},
+  {n:64,t:'Control Plane a Fondo',type:'base',tp:['etcd: backup completo con etcdctl (CRÍTICO — aparece siempre en el examen CKA)','PKI de K8s: CAs, certificados de componentes, kubeadm certs renew','kube-apiserver flags importantes: admission plugins, audit policy, OIDC']},
+  {n:65,t:'Storage Avanzado',type:'base',tp:['CSI drivers: spec completo, sidecars (external-provisioner, external-attacher)','Dynamic provisioning: StorageClass con diferentes provisioners y parámetros','Volume snapshots: VolumeSnapshot, VolumeSnapshotContent, restore a nuevo PVC']},
+  {n:66,t:'CNI — Redes Profundas',type:'lab',tp:['CNI spec: qué ejecuta K8s exactamente al crear un pod, IPAM plugins','Calico: instalación, BGP mode vs overlay (VXLAN), IPAM, eBPF dataplane','Cilium: eBPF, Hubble para observabilidad L3/L4/L7, sin kube-proxy']},
+  {n:67,t:'Network Policies',type:'lab',tp:['Ingress y Egress policies: sintaxis completa con examples reales y testeados','Deny-all por default + allow explícito: patrón de seguridad por namespace','Lab: segregar completamente namespaces prod/dev/staging con NetworkPolicy']},
+  {n:68,t:'Seguridad K8s',type:'base',tp:['RBAC: Roles vs ClusterRoles, Bindings, audit logs para debug de permisos','ServiceAccounts: token automount false, projected tokens, IRSA en EKS','Pod Security Standards: Privileged/Baseline/Restricted, namespace labels']},
+  {n:69,t:'Scheduling Avanzado',type:'base',tp:['Taints y Tolerations: NoSchedule, NoExecute, PreferNoSchedule con casos reales','Node/Pod Affinity/Anti-Affinity: required vs preferred, topologyKey para AZ spread','PriorityClasses, preemption, ResourceQuota y LimitRange por namespace']},
+  {n:70,t:'Troubleshooting I — Pods y Nodes',type:'lab',tp:['Metodología CKA: Events → describe → logs → exec → ephemeral debug container','CrashLoopBackOff, OOMKilled, ImagePullBackOff, Pending — diagnóstico sistemático','Node NotReady: kubelet estado, CNI problema, disk/memory pressure, cordon/drain']},
+  {n:71,t:'Troubleshooting II — Red y Storage',type:'lab',tp:['DNS: coredns debug, nslookup desde pod efímero, kube-proxy iptables rules','Storage: PVC Pending (no provisioner/RBAC), mount errors, fsGroup perms','etcd: restaurar desde backup, reconstruir cluster desde etcd snapshot']},
+  {n:72,t:'Cluster Upgrades',type:'lab',tp:['Proceso completo: drain control plane → kubeadm upgrade apply → uncordon','Upgrade de workers: drain → apt upgrade → kubeadm upgrade node → uncordon','Verificación post-upgrade: componentes, CNI, add-ons compatibles']},
+  {n:73,t:'Simulacros CKA I — Killer.sh',type:'exam',tp:['Killer.sh: primera sesión completa (environment idéntico al examen real, 120 min)','Medir velocidad: kubectl imperative commands vs escribir YAML desde cero','Setup: alias k=kubectl, source completions, vim settings (.vimrc tabstop=2)']},
+  {n:74,t:'Simulacros CKA II — Gaps',type:'exam',tp:['Killer.sh: segunda sesión atacando exactamente los gaps de la primera','KodeKloud: labs cronometrados por dominio (especialmente troubleshooting)','Estrategia: identificar las 3-5 tareas de mayor peso y atacarlas primero']},
+  {n:75,t:'Repaso Final CKA',type:'exam',tp:['Repasar: etcd backup/restore, cluster upgrade, RBAC, NetworkPolicy, PV/PVC','Flashcards: recursos y campos imperative (kubectl create role, rolebinding, sa...)','Checklist personal de comandos frecuentes con tiempo estimado por tarea']},
+  {n:76,t:'Examen CKA',type:'exam',tp:['Descanso el día anterior — no estudiar','RENDIR EXAMEN CKA (Certified Kubernetes Administrator) — 2h terminal','Si no pasa: 1 intento gratuito adicional incluido con la inscripción']}
+ ],
+ resources:[
+  {id:'r9-0',t:'KodeKloud — CKA Course (Mumshad Mannambeth)',type:'curso',paid:true,url:'https://learn.kodekloud.com/user/courses/cka-certification-course-certified-kubernetes-administrator',desc:'~$15/mes. El curso de referencia para CKA. Los labs son la clave: simulan el ambiente del examen. Mumshad es el instructor más reconocido para CKA.'},
+  {id:'r9-1',t:'Killer.sh — CKA Simulator (incluido con examen)',type:'lab',paid:false,url:'https://killer.sh/',desc:'Incluido con la compra del voucher CKA. El simulador más cercano al examen real. 2 sesiones de 36 horas. Usarlo al menos 2 semanas antes del examen.'},
+  {id:'r9-2',t:'Killercoda — CKA Scenarios (gratis)',type:'lab',paid:false,url:'https://killercoda.com/cka',desc:'Laboratorios CKA gratuitos en el browser. Cubre todos los dominios del examen. Usar diariamente en las semanas de simulacros.'},
+  {id:'r9-3',t:'Kubernetes: Up and Running — Burns et al (3ª ed)',type:'libro',paid:true,url:'https://www.oreilly.com/library/view/kubernetes-up-and/9781098110192/',desc:'~$50 USD. Más orientado a desarrolladores pero excelente para entender networking y storage en profundidad. Autores incluyen al creador de Kubernetes.'},
+  {id:'r9-4',t:'Ahmed Elfakharany — CKA Tips (YouTube)',type:'curso',paid:false,url:'https://www.youtube.com/results?search_query=CKA+tips+2024',desc:'Buscar videos de tips para CKA 2024/2025 en YouTube. Hay varios canales que muestran el ambiente real del examen y estrategias de tiempo.'}
+ ]
+},
+{id:10,name:'AWS SAP-C02',color:'#ffc078',period:'Jan–Apr 2028',wRange:'77–88',certs:['AWS SAP-C02'],voucher:false,note:'El examen más largo: 75 preguntas en 190 minutos. Las preguntas son escenarios de 3-4 párrafos. La estrategia de examen es tan importante como el conocimiento.',
+ weeks:[
+  {n:77,t:'Multi-Account + Organizations',type:'base',tp:['AWS Organizations: SCPs, OUs, inheritance model, SCP evaluation logic','IAM Identity Center: permission sets, attribute-based access (ABAC), MFA','Control Tower: landing zones, Account Factory (con Terraform), guardrails proactivos']},
+  {n:78,t:'Migraciones a Escala',type:'base',tp:['7Rs completas: cuándo usar cada estrategia con ejemplos reales de costos','AWS MGN: replication agent, launch settings, wave planning, cutover window','DMS + SCT: homogéneo vs heterogéneo, CDC replication, validation, parallel load']},
+  {n:79,t:'Networking Avanzado SAP',type:'base',tp:['Direct Connect + VPN backup: failover patterns, BGP communities para preferencia','TGW avanzado: route tables isoladas, peering inter-región, centralized egress','Centralizar inspección: Network Firewall centralizado con GWLB — patrón hub']},
+  {n:80,t:'Seguridad Enterprise',type:'base',tp:['SCP vs IAM: evaluation logic completa, Deny explícito vs NotAction','GuardDuty + Macie + Security Hub: agregación central con EventBridge + Lambda','Config + conformance packs: CIS Benchmark, PCI DSS, HIPAA automated evidence']},
+  {n:81,t:'Disaster Recovery Avanzado',type:'base',tp:['4 patrones DR con números reales de RTO/RPO y costo mensual aproximado','Multi-region active-active: Route 53, DynamoDB global tables, Aurora global DB','Chaos engineering: AWS FIS (Fault Injection Service) para validar resiliencia real']},
+  {n:82,t:'FinOps + Rendimiento',type:'base',tp:['Savings Plans vs Reserved: mix óptimo según forecast de Compute Optimizer','Cost Anomaly Detection + Budget Actions automáticas + rightsizing continuo','Performance Insights RDS, ElastiCache patrones, Global Accelerator vs CloudFront']},
+  {n:83,t:'Arquitecturas Complejas I',type:'base',tp:['Event-driven: EventBridge Pipes + SQS FIFO + Lambda + DLQ + idempotencia','Data lakes: S3 + Glue + Athena + Lake Formation + LF-Tags para gobernanza','API Gateway: REST vs HTTP API vs WebSocket, usage plans, canary deployments']},
+  {n:84,t:'Arquitecturas Complejas II',type:'base',tp:['MSA patterns: saga, CQRS, event sourcing con servicios AWS nativos','Regulated industries: HIPAA, PCI DSS, FedRAMP — controles y servicios específicos','AI/ML infra: SageMaker, Bedrock hosting — patrones de integración con infra existente']},
+  {n:85,t:'Estrategia de Examen SAP',type:'base',tp:['Técnica de eliminación: identificar los 2 distractores obvios y comparar los 2 restantes','Leer el último párrafo primero: la pregunta real suele estar al final del escenario','Gestión de tiempo: 190 min / 75 preguntas = 2.5 min/pregunta, reservar 20 min para revisar']},
+  {n:86,t:'Simulacros SAP I',type:'exam',tp:['Simulacro Tutorials Dojo SAP (75 preguntas / 190 min cronometrado)','Analizar TODAS las explicaciones, incluyendo las correctas — la explicación vale más que la respuesta','Categorizar errores por dominio para dirigir el repaso']},
+  {n:87,t:'Simulacros SAP II + Repaso',type:'exam',tp:['Segundo simulacro completo — comparar score vs primer simulacro','Repasar exam guide: pesos por dominio (Design Arq 26%, Workloads 24%, Org 20%, Cost 30%)','Notas condensadas: 1 página por servicio clave del examen']},
+  {n:88,t:'Examen SAP-C02',type:'exam',tp:['Descanso previo — repaso ligero de notas (no estudiar conceptos nuevos)','RENDIR EXAMEN AWS SAP-C02 (Solutions Architect Professional)','Último sprint: ANS es la meta final']}
+ ],
+ resources:[
+  {id:'r10-0',t:'Adrian Cantrill — SAP-C02 (MEJOR)',type:'curso',paid:true,url:'https://learn.cantrill.io/p/aws-certified-solutions-architect-professional',desc:'~$40 USD pago único. El curso más completo para SAP. Misma calidad que el SAA de Cantrill pero con mayor profundidad. Absolutamente necesario.'},
+  {id:'r10-1',t:'Tutorials Dojo — SAP practice exams (ESENCIAL)',type:'practica',paid:true,url:'https://tutorialsdojo.com/courses/aws-certified-solutions-architect-professional-practice-exams/',desc:'~$15 USD. Los mejores simulacros para SAP. Imprescindible. Las explicaciones de las preguntas incorrectas son el recurso de estudio más valioso.'},
+  {id:'r10-2',t:'AWS re:Invent Sessions (YouTube, gratis)',type:'curso',paid:false,url:'https://www.youtube.com/@amazonwebservices',desc:'Sesiones técnicas de re:Invent en YouTube. Buscar sessions de architecture, networking avanzado, multi-account. Nivel de profundidad real de producción.'},
+  {id:'r10-3',t:'AWS Whitepapers (gratis)',type:'libro',paid:false,url:'https://aws.amazon.com/whitepapers/',desc:'Whitepapers oficiales: "AWS Well-Architected", "Disaster Recovery", "SaaS Lens", "Migration". Esenciales para los patrones arquitectónicos del SAP.'}
+ ]
+},
+{id:11,name:'AWS ANS-C01',color:'#52b788',period:'Apr–Jul 2028',wRange:'89–100',certs:['AWS ANS-C01'],voucher:false,note:'El pico técnico de toda la ruta. BGP + Direct Connect = ~40% del examen. Los labs de infraestructura son no negociables aquí.',
+ weeks:[
+  {n:89,t:'BGP Avanzado — Fundamentos',type:'base',tp:['BGP: AS paths, communities, MED, local-pref, weight — efectos en decisión de routing','Direct Connect BGP: private VIF, public VIF, transit VIF — cuándo usar cada uno','BGP communities AWS (7224:xxxx): controlar routing de tráfico desde on-prem hacia AWS']},
+  {n:90,t:'Direct Connect — Arquitectura',type:'lab',tp:['LAG: Link Aggregation Groups, LACP, failover detection time y heartbeat','Direct Connect Gateway: multi-region, multi-account, SiteLink para DC-to-DC','Modos de routing: static vs BGP, ECMP con múltiples VIFs — configuración completa']},
+  {n:91,t:'Direct Connect — Failover Patterns',type:'lab',tp:['Failover DC + VPN: cuándo usa BGP para preferencia automática','Active-active DC: LAG + ECMP + anuncio de prefijos — configuración completa','Lab: simular failover con traffic flow logs y verificar conmutación automática']},
+  {n:92,t:'Transit Gateway Avanzado',type:'base',tp:['TGW route tables: isolation, spoke-to-spoke, centralized egress, blackhole routes','Multicast con TGW: grupos, IGMP membership reports, static member joins','Network Manager: topología global, Route Analyzer, eventos y insights']},
+  {n:93,t:'PrivateLink + GWLB + ENIs',type:'base',tp:['PrivateLink: NLB endpoint service, consumer/provider model, DNS resolution','GWLB: GENEVE protocol, traffic inspection pattern (bump-in-the-wire), centralized','ENIs secundarias: multi-homing, elastic IPs por ENI, failover con Overlay IP']},
+  {n:94,t:'VPN Avanzado',type:'lab',tp:['S2S VPN + BGP: ECMP con múltiples túneles, AS prepend, DPD, rekey lifetime','Client VPN: mutual auth, SAML/Okta, split tunneling, authorization rules por AD group','Accelerated S2S VPN: Global Accelerator anycast endpoints + BGP']},
+  {n:95,t:'Seguridad de Red AWS',type:'base',tp:['Network Firewall: Suricata rules, stateless/stateful rule groups, alert vs drop','WAF v2: managed rules (Core, SQLi, XSS), Bot Control, fraud control, IP sets, rate','Shield Advanced: DDoS response team, cost protection, proactive engagement, application layer']},
+  {n:96,t:'DNS Avanzado AWS',type:'base',tp:['Route 53 Resolver: inbound/outbound endpoints, forwarding rules, DNSSEC chain','DNS híbrido bidireccional: on-prem → AWS y AWS → on-prem con Resolver','Route 53 Profiles para multi-account DNS, Hosted Zone associations, query logging']},
+  {n:97,t:'Monitoring + Troubleshooting',type:'lab',tp:['VPC Flow Logs v5: campos extendidos (pkt-srcaddr, sublocation), análisis con Athena','Reachability Analyzer: path analysis automatizado, explicación de drops por componente','CloudWatch Network Monitor: packet loss probes, latency baseline por ruta']},
+  {n:98,t:'Labs ANS Intensivos',type:'lab',tp:['Lab 1: DC simulado (Transit VIF + DX GW) + failover automático a S2S VPN BGP','Lab 2: TGW centralizado multi-cuenta + Network Firewall con GWLB inspection','Lab 3: DNS híbrido completo: Resolver endpoints + AD DNS + Route 53 Profiles']},
+  {n:99,t:'Simulacros ANS',type:'exam',tp:['Simulacros Tutorials Dojo ANS — analizar profundo los errores en BGP y DC','Exam guide: BGP+DC = ~40%, VPC+híbrido = ~30%, seguridad = ~20%, DNS+monitor = ~10%','Flashcards: comunidades BGP, límites de VIFs, puertos Direct Connect, ECMP rules']},
+  {n:100,t:'Examen ANS-C01',type:'exam',tp:['Descanso obligatorio + repaso ligero de notas condensadas (no estudiar nuevo)','RENDIR EXAMEN AWS ANS-C01 (Advanced Networking Specialty)','ROADMAP COMPLETADO — mediados 2028']}
+ ],
+ resources:[
+  {id:'r11-0',t:'Adrian Cantrill — ANS-C01',type:'curso',paid:true,url:'https://learn.cantrill.io',desc:'~$40 USD. El mismo nivel de profundidad que sus demás cursos. Cubre Direct Connect y BGP con el detalle que requiere el examen ANS.'},
+  {id:'r11-1',t:'Tutorials Dojo — ANS practice exams (ESENCIAL)',type:'practica',paid:true,url:'https://tutorialsdojo.com/courses/aws-advanced-networking-specialty-practice-exams/',desc:'~$15 USD. Absolutamente necesario. Las preguntas de BGP y Direct Connect de Tutorials Dojo son muy cercanas al examen real.'},
+  {id:'r11-2',t:'AWS VPC, Direct Connect y Route 53 Docs',type:'curso',paid:false,url:'https://docs.aws.amazon.com/vpc/',desc:'La documentación oficial de AWS para VPC, Direct Connect, Route 53 Resolver. Las guías de usuario de Direct Connect son referencia de estudio primaria.'},
+  {id:'r11-3',t:'Ivan Pepelnjak — BGP in AWS (ipSpace.net)',type:'curso',paid:false,url:'https://blog.ipspace.net/tag/AWS/',desc:'Blog técnico de Ivan Pepelnjak con artículos profundos sobre BGP en AWS, Direct Connect y networking avanzado. Nivel experto, gratis.'},
+  {id:'r11-4',t:'AWS Networking Cookbook — Packt',type:'libro',paid:true,url:'https://www.packtpub.com/en-us/product/aws-networking-cookbook-9781803234656',desc:'~$35 USD. Libro práctico con recetas de networking AWS: VPN, Direct Connect, TGW, Route 53. Útil para los labs de las semanas 97-98.'}
+ ]
+}
+];
+
+const DEFAULT_EXAMS=[
+  {id:'e0',name:'Terraform Associate',org:'HashiCorp',phaseId:1,week:13,voucher:false,price:70,url:'https://developer.hashicorp.com/terraform/certifications',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e1',name:'AWS CLF-C02',org:'AWS',phaseId:2,week:16,voucher:true,price:0,url:'https://aws.amazon.com/certification/certified-cloud-practitioner/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e2',name:'NSE 1 — Network Security Associate',org:'Fortinet',phaseId:3,week:17,voucher:false,price:0,url:'https://training.fortinet.com/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e3',name:'NSE 2 — Network Security Associate',org:'Fortinet',phaseId:3,week:18,voucher:false,price:0,url:'https://training.fortinet.com/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e4',name:'NSE 3 — Network Security Associate',org:'Fortinet',phaseId:3,week:19,voucher:false,price:0,url:'https://training.fortinet.com/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e5',name:'AWS SAA-C03',org:'AWS',phaseId:4,week:28,voucher:false,price:300,url:'https://aws.amazon.com/certification/certified-solutions-architect-associate/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e6',name:'AZ-900 Azure Fundamentals',org:'Microsoft',phaseId:6,week:37,voucher:false,price:165,url:'https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e7',name:'AZ-104 Azure Administrator',org:'Microsoft',phaseId:6,week:42,voucher:false,price:165,url:'https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e8',name:'AZ-700 Azure Network Engineer',org:'Microsoft',phaseId:6,week:48,voucher:false,price:165,url:'https://learn.microsoft.com/en-us/credentials/certifications/azure-network-engineer-associate/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e9',name:'KCNA',org:'CNCF',phaseId:8,week:62,voucher:false,price:250,url:'https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e10',name:'CKA',org:'CNCF',phaseId:9,week:76,voucher:false,price:395,url:'https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e11',name:'AWS SAP-C02',org:'AWS',phaseId:10,week:88,voucher:false,price:300,url:'https://aws.amazon.com/certification/certified-solutions-architect-professional/',planned:'',taken:'',score:'',status:'pendiente'},
+  {id:'e12',name:'AWS ANS-C01',org:'AWS',phaseId:11,week:100,voucher:false,price:300,url:'https://aws.amazon.com/certification/aws-certified-advanced-networking-specialty/',planned:'',taken:'',score:'',status:'pendiente'}
+];
+
+const KEY='crm-v2';
+let S={};
+let openPh=new Set();
+let resPhase='all',resType='all',resDone='all';
+let activeTab='dash';
+let notesKey=null;
+
+function load(){
+  try{const d=localStorage.getItem(KEY);if(d)S=JSON.parse(d);}catch(e){}
+  S.dw=S.dw||{};
+  S.dr=S.dr||{};
+  S.notes=S.notes||{};
+  S.exams=S.exams||JSON.parse(JSON.stringify(DEFAULT_EXAMS));
+}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){alert('Error guardando: '+e.message);}}
+
+function totalW(){return PHASES.reduce((a,p)=>a+p.weeks.length,0);}
+function doneW(){return Object.values(S.dw).filter(Boolean).length;}
+function totalR(){return PHASES.reduce((a,p)=>a+p.resources.length,0);}
+function doneR(){return Object.values(S.dr).filter(Boolean).length;}
+function pp(pid){const p=PHASES[pid],d=p.weeks.filter(w=>S.dw[pid+':'+w.n]).length;return Math.round(d/p.weeks.length*100);}
+function op(){return Math.round(doneW()/totalW()*100);}
+function certsDone(){return S.exams.filter(e=>e.status==='aprobado').length;}
+function currentPhaseIdx(){let i=PHASES.findIndex(p=>pp(p.id)<100);return i<0?PHASES.length-1:i;}
+
+function showTab(tab){
+  activeTab=tab;
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  render();
+  window.scrollTo(0,0);
+}
+
+function render(){
+  const c=document.getElementById('content');
+  if(activeTab==='dash')c.innerHTML=renderDash();
+  else if(activeTab==='fases')c.innerHTML=renderFases();
+  else if(activeTab==='recursos')c.innerHTML=renderRecursos();
+  else c.innerHTML=renderExamenes();
+}
+
+function renderDash(){
+  const pct=op(),ci=currentPhaseIdx(),cp=PHASES[ci];
+  const pending=S.exams.filter(e=>e.status!=='aprobado');
+  return '<div class="dash-hero"><div class="dash-pct">'+pct+'%</div><div class="dash-sub">completado · '+doneW()+' de '+totalW()+' semanas</div><div class="progress-bar"><div class="progress-fill" style="width:'+pct+'%"></div></div></div>'
+    +'<div class="stats-grid">'
+    +'<div class="stat-card"><div class="stat-val">'+doneW()+'</div><div class="stat-label">Semanas hechas</div></div>'
+    +'<div class="stat-card"><div class="stat-val">'+doneR()+'</div><div class="stat-label">Recursos</div></div>'
+    +'<div class="stat-card"><div class="stat-val">'+certsDone()+'</div><div class="stat-label">Certificaciones</div></div>'
+    +'<div class="stat-card"><div class="stat-val">'+(PHASES.length-ci)+'</div><div class="stat-label">Fases restantes</div></div>'
+    +'</div>'
+    +'<div class="section-title">Fase actual</div>'
+    +'<div class="current-card"><div class="cc-top"><div class="cc-dot" style="background:'+cp.color+'"></div><div><div class="cc-name">'+cp.name+'</div><div class="cc-period">'+cp.period+' · Semanas '+cp.wRange+'</div></div></div>'
+    +'<div class="cc-prog"><div class="progress-bar sm" style="flex:1"><div class="progress-fill" style="width:'+pp(cp.id)+'%"></div></div><span>'+pp(cp.id)+'%</span></div></div>'
+    +'<div class="section-title">Próximas certificaciones</div>'
+    +pending.slice(0,4).map(e=>'<div class="cert-pill"><span class="cert-pill-name">'+e.name+'</span>'+(e.voucher?'<span class="badge voucher">VOUCHER</span>':'')+(e.price>0?'<span class="badge pendiente">$'+e.price+' USD</span>':e.price===0&&!e.voucher?'<span class="badge gratis">GRATIS</span>':'')+'</div>').join('')
+    +(cp.note?'<div class="section-title">Nota de fase</div><div style="font-size:12px;color:var(--text2);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px">'+cp.note+'</div>':'');
+}
+
+function renderFases(){
+  return '<div>'+PHASES.map(p=>{
+    const pct=pp(p.id),open=openPh.has(p.id);
+    const weeksHtml=open?'<div class="weeks-list">'+p.weeks.map(w=>{
+      const k=p.id+':'+w.n,done=S.dw[k],hasNote=S.notes[k];
+      const typeLbl=w.type==='lab'?'Lab':w.type==='exam'?'Exam':'Teoría';
+      return '<div class="week-item'+(done?' done':'')+'"><div class="week-row"><input type="checkbox"'+(done?' checked':'')+" onchange=\"toggleWeek("+p.id+","+w.n+",this.checked)\">"
+        +'<span class="week-title">Sem '+w.n+': '+w.t+'</span>'
+        +'<span class="wtype '+w.type+'">'+typeLbl+'</span></div>'
+        +'<div class="week-topics">'+w.tp.map(t=>'<div class="topic">'+t+'</div>').join('')+'</div>'
+        +"<button class='notes-btn"+(hasNote?' has-note':'')+"' onclick=\"openNotes('"+k+"','Sem "+w.n+": "+w.t.replace(/'/g,'&#39;')+"')\">"+( hasNote?'📝 Ver nota':'+ Nota')+'</button>'
+        +'</div>';
+    }).join('')+'</div>':'';
+    return '<div class="phase-card">'
+      +'<div class="phase-hdr" onclick="togglePh('+p.id+')">'
+      +'<div class="ph-dot" style="background:'+p.color+'"></div>'
+      +'<div class="ph-info"><div class="ph-name">'+p.name+'</div><div class="ph-meta">'+p.period+' · Sems '+p.wRange+(p.certs.length?' · '+p.certs.join(', '):'')+'</div></div>'
+      +'<div class="ph-right">'+(p.voucher?'<span class="badge voucher">VOUCHER</span>':'')
+      +'<div class="ph-pct">'+pct+'%</div><span class="chevron">'+(open?'▲':'▼')+'</span></div></div>'
+      +'<div class="ph-bar"><div class="ph-fill" style="width:'+pct+'%;background:'+p.color+'"></div></div>'
+      +weeksHtml+'</div>';
+  }).join('')+'</div>';
+}
+
+function renderRecursos(){
+  let all=[];
+  PHASES.forEach(p=>p.resources.forEach(r=>all.push({...r,pid:p.id,pname:p.name,pc:p.color})));
+  if(resPhase!=='all')all=all.filter(r=>r.pid===parseInt(resPhase));
+  if(resType!=='all')all=all.filter(r=>r.type===resType);
+  if(resDone==='done')all=all.filter(r=>S.dr[r.pid+':'+r.id]);
+  if(resDone==='pending')all=all.filter(r=>!S.dr[r.pid+':'+r.id]);
+  const phOpts=PHASES.map(p=>'<option value="'+p.id+'"'+(resPhase==p.id?' selected':'')+'>'+p.name+'</option>').join('');
+  return '<div class="filters">'
+    +'<select onchange="resPhase=this.value;render()"><option value="all">Todas las fases</option>'+phOpts+'</select>'
+    +'<select onchange="resType=this.value;render()"><option value="all">Todos los tipos</option><option value="libro"'+(resType==='libro'?' selected':'')+'>Libro</option><option value="curso"'+(resType==='curso'?' selected':'')+'>Curso</option><option value="lab"'+(resType==='lab'?' selected':'')+'>Lab</option><option value="practica"'+(resType==='practica'?' selected':'')+'>Práctica</option></select>'
+    +'<select onchange="resDone=this.value;render()"><option value="all">Todos</option><option value="pending"'+(resDone==='pending'?' selected':'')+'>Pendientes</option><option value="done"'+(resDone==='done'?' selected':'')+'>Completados</option></select>'
+    +'</div>'
+    +'<div class="res-count">'+all.length+' recurso(s)</div>'
+    +'<div>'+all.map(r=>{
+      const k=r.pid+':'+r.id,done=S.dr[k];
+      return '<div class="res-card'+(done?' done':'')+'"><div class="res-top"><label class="res-check"><input type="checkbox"'+(done?' checked':'')+" onchange=\"toggleRes('"+k+"',this.checked)\"><span class=\"res-title\">"+r.t+'</span></label>'
+        +'<div class="res-badges"><span class="badge '+r.type+'">'+r.type+'</span>'+(r.paid?'<span class="badge pago">Pago</span>':'<span class="badge gratis">Gratis</span>')+'</div></div>'
+        +'<div class="res-phase" style="color:'+r.pc+';font-size:11px;margin-bottom:4px">Fase: '+r.pname+'</div>'
+        +'<div class="res-desc">'+r.desc+'</div>'
+        +(r.url?'<a href="'+r.url+'" target="_blank" class="res-link">Abrir recurso →</a>':'')
+        +'</div>';
+    }).join('')+'</div>';
+}
+
+function renderExamenes(){
+  return '<div>'+S.exams.map((e,i)=>{
+    const sc={pendiente:'var(--text3)',programado:'var(--blue)',aprobado:'var(--green)',reprobado:'var(--red)'}[e.status]||'var(--text3)';
+    const isPh=PHASES[e.phaseId];
+    return '<div class="exam-card"><div class="exam-top"><div>'
+      +'<div class="exam-name">'+e.name+'</div>'
+      +'<div class="exam-meta">'+e.org+' · Sem '+e.week+(isPh?' · Fase: '+isPh.name:'')+'</div></div>'
+      +'<div class="exam-badges">'+(e.voucher?'<span class="badge voucher">VOUCHER</span>':e.price===0?'<span class="badge gratis">GRATIS</span>':'<span style="font-size:11px;color:var(--text2)">$'+e.price+' USD</span>')
+      +'<span class="badge '+e.status+'" style="margin-left:4px">'+e.status+'</span></div></div>'
+      +'<div class="exam-fields">'
+      +'<div class="field"><label>Fecha planificada</label><input type="date" value="'+e.planned+'" onchange="updateExam('+i+',\'planned\',this.value)"></div>'
+      +'<div class="field"><label>Fecha rendida</label><input type="date" value="'+e.taken+'" onchange="updateExam('+i+',\'taken\',this.value)"></div>'
+      +'<div class="field"><label>Score / Resultado</label><input type="text" value="'+e.score+'" placeholder="ej: 850/1000 o PASS" onchange="updateExam('+i+',\'score\',this.value)"></div>'
+      +'<div class="field"><label>Estado</label><select onchange="updateExam('+i+',\'status\',this.value)"><option'+(e.status==='pendiente'?' selected':'')+'>pendiente</option><option'+(e.status==='programado'?' selected':'')+'>programado</option><option'+(e.status==='aprobado'?' selected':'')+'>aprobado</option><option'+(e.status==='reprobado'?' selected':'')+'>reprobado</option></select></div>'
+      +'</div>'
+      +(e.url?'<div style="margin-top:8px"><a href="'+e.url+'" target="_blank" style="font-size:12px;color:var(--blue)">Registrarse en '+e.org+' →</a></div>':'')
+      +'</div>';
+  }).join('')+'</div>';
+}
+
+function togglePh(id){
+  if(openPh.has(id))openPh.delete(id);
+  else openPh.add(id);
+  render();
+}
+function toggleWeek(pid,wn,checked){S.dw[pid+':'+wn]=checked;save();render();}
+function toggleRes(key,checked){S.dr[key]=checked;save();render();}
+function updateExam(i,field,val){S.exams[i][field]=val;save();}
+
+let notesTitle='';
+function openNotes(key,title){
+  notesKey=key;notesTitle=title;
+  document.getElementById('notes-modal-title').textContent=title;
+  document.getElementById('notes-area').value=S.notes[key]||'';
+  document.getElementById('notes-overlay').classList.add('show');
+}
+function saveNotes(){S.notes[notesKey]=document.getElementById('notes-area').value;save();closeNotes();render();}
+function closeNotes(){document.getElementById('notes-overlay').classList.remove('show');}
+
+function showSettings(){document.getElementById('settings-overlay').classList.add('show');}
+function closeSettings(){document.getElementById('settings-overlay').classList.remove('show');}
+
+function exportData(){
+  const d=JSON.stringify(S,null,2);
+  const b=new Blob([d],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(b);
+  a.download='cloud-roadmap-'+new Date().toISOString().slice(0,10)+'.json';
+  a.click();
+}
+function importData(input){
+  const f=input.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=e=>{try{S=JSON.parse(e.target.result);save();render();closeSettings();alert('Progreso importado correctamente.');}catch(err){alert('Error: archivo JSON inválido.');}};
+  r.readAsText(f);input.value='';
+}
+function confirmReset(){
+  if(confirm('¿Borrar todo el progreso? Esta acción no se puede deshacer.')){
+    localStorage.removeItem(KEY);load();render();closeSettings();
+  }
+}
+
+document.getElementById('notes-overlay').addEventListener('click',function(e){if(e.target===this)closeNotes();});
+document.getElementById('settings-overlay').addEventListener('click',function(e){if(e.target===this)closeSettings();});
+
+load();render();
+</script>
+</body>
+</html>
