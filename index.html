@@ -212,12 +212,15 @@ button{font-family:inherit;cursor:pointer}
 <div class="overlay" id="settings-overlay">
   <div class="modal">
     <h3>Gestión de datos</h3>
+    <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:10px 12px;margin-bottom:10px;font-size:12px;color:var(--text2);line-height:1.5">
+      <strong style="color:var(--text)">Tu progreso es local y privado.</strong> Se guarda en este navegador y no se comparte con nadie. Si alguien mas visita este roadmap, tendra su propia copia en blanco.
+    </div>
     <div class="settings-list">
       <button class="btn" onclick="exportData()">⬇ Exportar progreso (JSON)</button>
       <button class="btn" onclick="document.getElementById('import-file').click()">⬆ Importar progreso (JSON)</button>
       <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(this)">
       <div class="settings-divider"></div>
-      <small style="color:var(--text2);font-size:11px">Exporta el JSON y guárdalo para sincronizar entre dispositivos. Al importarlo en otro browser, tu progreso queda disponible.</small>
+      <small style="color:var(--text2);font-size:11px">Exporta el JSON y guardalo para sincronizar entre dispositivos. Al importarlo en otro browser, tu progreso queda disponible.</small>
       <div class="settings-divider"></div>
       <button class="btn danger" onclick="confirmReset()">✕ Reiniciar todo el progreso</button>
       <button class="btn" onclick="closeSettings()">Cerrar</button>
