@@ -1,8 +1,8 @@
 # Roadmap Cloud Infrastructure
 
-Notas de estudio sobre infraestructura cloud, networking, contenedores e IaC. El contenido se construye a partir de sesiones con [NotebookLM](https://notebooklm.google.com/) y documentacion oficial, siguiendo un template estandarizado que prioriza el _por que_ sobre el _como_.
+Notas de estudio sobre infraestructura cloud, networking, contenedores e IaC. El contenido se construye a partir de sesiones con documentacion oficial, siguiendo un template estandarizado que prioriza el _por que_ sobre el _como_.
 
-**Stack principal:** AWS · Terraform · Docker · Kubernetes · Go · Python · Linux
+**Stack principal:** AWS · Azure · Docker · Terraform · Kubernetes · Go · Python · Linux · Fortinet
 
 [roadmap.jufe.dev](https://roadmap.jufe.dev)
 
@@ -10,18 +10,16 @@ Notas de estudio sobre infraestructura cloud, networking, contenedores e IaC. El
 
 ## Estructura
 
-```
-00-fundamentos/        Linux, networking, Python — los cimientos de todo lo demas
-01-Internet/           Como funciona la web: HTTP, DNS, dominios, hosting
-02-APIs/               REST, autenticacion, conceptos generales
-03-VCS/                Git y GitHub
-04-DataBases/          SQL, normalizacion, SQL Server
-05-dev/                Lenguajes y frameworks: Go, Python, Astro, front, legado
-09-contenedores/       Docker, Kubernetes, Swarm
-10-IaC/                Terraform, CloudFormation, GitHub Actions
-11-seguridad/          Conceptos generales, Fortinet NSE
-12-aws/                Compute, storage, networking, serverless, multi-account
-13-azure/              Identity, networking, hybrid, Virtual WAN
+``
+aws/                computo, storage, redes, identidad, serverless, gobierno, IaC, notas de examen
+azure/              computo, storage, redes, identidad, serverless, gobierno, IaC, notas de examen
+cicd/               github actions
+contenedores/       docker
+desarrollo/         apis, bases de datos, go, git
+fundamentos/        linux, redes, python
+kubernetes/         arquitecturas, redes, cargas de trabajo, notas de examen
+seguridad/          conceptos generales, Fortinet NSE, notas de examen NSE
+terraform/          estado, conceptos, modulos, notas de examen
 ```
 
 ---
@@ -42,11 +40,4 @@ Cada archivo sigue la estructura definida en [`template.md`](template.md):
 
 ## Roadmap
 
-El foco actual es infraestructura cloud en AWS con proyeccion hacia la certificacion **AWS Advanced Networking Specialty**. El camino:
-
-1. ~~Fundamentos (Linux, networking, scripting)~~
-2. Contenedores (Docker, Kubernetes, EKS)
-3. IaC (Terraform, GitHub Actions, OIDC)
-4. **Terraform Associate** — en preparacion
-5. AWS networking profundo (VPC, TGW, PrivateLink, Direct Connect)
-6. AWS Advanced Networking Specialty
+El foco actual es la especializacion en redes y contenedores por medio de infraestructura cloud en AWS y Azure con proyeccion hacia la certificacion **AWS Advanced Networking Specialty**.
