@@ -17,6 +17,8 @@ Por defecto cada suscripcion de Azure tiene un directorio llamado Default.
 
 Entra ID centraliza la idendidad en un unico tenant. Un tenant de Microsoft Entra puede ser asociado a varias suscripciones de Azure.
 
+A traves de Microsoft Entra Connect se hace una sincronizacion del on-prem con cloud.
+
 ### [Tenant]
 
 Se refiere a una instancia de Microsoft Entra ID que pertenece a una empresa. Es la unidad fundamental.
